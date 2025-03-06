@@ -143,7 +143,7 @@
 
           const namePattern = /^[a-zA-Z\s]+$/;
           const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-          const subjectPattern = /^[a-zA-Z0-9\s]+$/;
+          const subjectPattern = /^[a-zA-Z0-9\s.,!?()"&'_-]+$/;
 
           let isValid = true;
 
@@ -177,7 +177,7 @@
 
           if (!subjectPattern.test(subject)) {
             document.getElementById("subjectError").textContent =
-              "Subject must only contain letters, numbers, and spaces.";
+              "Subject must only contain letters, numbers, spaces, and basic punctuation.";
             isValid = false;
           } else {
             document.getElementById("subjectError").textContent = "";

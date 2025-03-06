@@ -110,7 +110,8 @@
             headers: {
                 "Content-Type": "application/json",
             },
-            ...(tabId === "apprenticeships" && { "Ocp-Apim-Subscription-Key": 123 })
+            
+            ...(tabId === "apprenticeships" && { "Ocp-Apim-Subscription-Key": "9c616cdbabee487d867ef9bde6b95f4c" })
         })
           .then((response) => response.json())
           .then((data) => {

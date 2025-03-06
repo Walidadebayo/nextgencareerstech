@@ -18,9 +18,10 @@
       <!-- Hero Section -->
       <section
         class="flex-center hero gap-10 px-10 py-10 lg-flex-row flex-col mt-2"
+        data-aos="fade-up"
       >
         <div class="flex flex-col space-y-2">
-          <h1 id="hero-text">Tech Career Paths</h1>
+          <h1 id="hero-text">Resources</h1>
           <p class="text-lg text-gray">
             Explore various tech career paths, their roles, and the skills you
             will learn.
@@ -33,7 +34,7 @@
       </section>
 
       <!-- Career Paths Section -->
-      <section class="px-8 career-paths my-10">
+      <section class="px-8 career-paths my-10" data-aos="fade-up">
         <h1>Tech Career Paths</h1>
         <h2>What They Do & Skills You Will Learn</h2>
 
@@ -235,6 +236,16 @@
           .getElementById("resources")
           .scrollIntoView({ behavior: "smooth" });
       }
+      
+      window.addEventListener("load", () => {
+        // Initialise AOS
+        AOS.init({
+          duration: 1000,
+          easing: "ease-in-out",
+          once: false,
+          mirror: true,
+        });
+      });
     </script>
     <script src="/js/index.js"></script>
   </body>

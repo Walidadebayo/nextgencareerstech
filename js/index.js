@@ -1,4 +1,3 @@
-
 // add favicons to all pages
 const faviconLink = document.createElement("link");
 faviconLink.rel = "icon";
@@ -27,57 +26,60 @@ var Tawk_API = Tawk_API || {},
 })();
 
 window.addEventListener("load", () => {
-  // Initialise AOS
-  AOS.init({
-    duration: 1000,
-    easing: "ease-in-out",
-    once: false,
-    mirror: true,
-  });
-// Append header to body to to all pages when visited to avoid code duplication
-fetch("/layout/header.html")
-  .then((response) => response.text())
-  .then((data) => {
-    // Insert the header HTML into the body
-    document.body.insertAdjacentHTML("afterbegin", data);
+  document.querySelector(".preloader").classList.remove("is-active");
 
-    // Add event listener to menu toggle button to show/hide menu on mobile
-    const hamburger = document.getElementById("menu-toggle");
-    const menu = document.getElementById("mobile-nav");
-    if (hamburger && menu) {
-      hamburger.addEventListener("click", function () {
-        menu.classList.toggle("show");
+  // Append header to body to to all pages when visited to avoid code duplication
+  fetch("/layout/header.html")
+    .then((response) => response.text())
+    .then((data) => {
+      // Insert the header HTML into the body
+      document.body.insertAdjacentHTML("afterbegin", data);
+
+      // Add event listener to menu toggle button to show/hide menu on mobile
+      const hamburger = document.getElementById("menu-toggle");
+      const menu = document.getElementById("mobile-nav");
+      const searchBar = document.getElementById("search-bar");
+      if (hamburger && menu) {
+        hamburger.addEventListener("click", function () {
+          menu.classList.toggle("show");
+          if (searchBar.classList.contains("show")) {
+            searchBar.style.top = "250px";
+          } else {            
+            searchBar.style.top = "50px";
+          }
+        });
+      }
+
+      // Highlight the current page in the navigation menu
+      const currentLocation = location.href;
+      const menuItem = document.querySelectorAll(".nav-links a");
+      menuItem.forEach((item) => {
+        if (item.href === currentLocation) {
+          item.classList.add("active");
+        }
       });
-    }
 
-    // Highlight the current page in the navigation menu
-    const currentLocation = location.href;
-    const menuItem = document.querySelectorAll(".nav-links a");
-    menuItem.forEach((item) => {
-      if (item.href === currentLocation) {
-        item.classList.add("active");
+      // Add event listener to search icon to show/hide search bar
+      const searchIcon = document.getElementById("search-toggle");
+      if (searchIcon && searchBar) {
+        searchIcon.addEventListener("click", function () {
+          searchBar.classList.toggle("show");
+          if (menu.classList.contains("show")) {
+            searchBar.style.top = "250px"
+          } else {
+            searchBar.style.top = "50px";
+          }
+        });
       }
     });
 
-    // Add event listener to search icon to show/hide search bar
-    const searchIcon = document.getElementById("search-toggle");
-    const searchBar = document.getElementById("search-bar");
-    if (searchIcon && searchBar) {
-      searchIcon.addEventListener("click", function () {
-        searchBar.classList.toggle("show");
-      });
-    }
-  });
-
-// Append footer to body to to all pages when visited to avoid code duplication
-fetch("/layout/footer.html")
-  .then((response) => response.text())
-  .then((data) => {
-    document.body.insertAdjacentHTML("beforeend", data);
-    // Update the current year in the footer
-    document.getElementById("current-year").innerText =
-      new Date().getFullYear();
-  });
-
-  document.querySelector('.preloader').classList.remove('is-active')
+  // Append footer to body to to all pages when visited to avoid code duplication
+  fetch("/layout/footer.html")
+    .then((response) => response.text())
+    .then((data) => {
+      document.body.insertAdjacentHTML("beforeend", data);
+      // Update the current year in the footer
+      document.getElementById("current-year").innerText =
+        new Date().getFullYear();
+    });
 });

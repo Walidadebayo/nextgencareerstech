@@ -15,10 +15,33 @@ body {
 body {
   background-color: #f4f4f4;
   color: #333;
+  overflow-x: hidden !important;
+}
+
+
+body::-webkit-scrollbar {
+  width: 4px;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #a100ff;
+  border-radius: 30px;
 }
 
 a {
   text-decoration: none;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+button:hover:is(:disabled) {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
 
 /* input */
@@ -27,7 +50,7 @@ input[type="email"],
 input[type="password"],
 input[type="number"],
 input[type="tel"],
-input[type="radio"],
+/* input[type="radio"], */
 input[type="checkbox"],
 input[type="search"],
 select,
@@ -41,6 +64,12 @@ textarea {
   margin-top: 0.5rem;
   margin-bottom: 1rem;
   transition: all 0.3s ease-in-out;
+}
+
+input[type= "radio"]:checked,
+input[type= "checkbox"]:checked {
+  accent-color: #a100ff;
+  border-color: #a100ff;
 }
 
 input:focus,
@@ -164,10 +193,6 @@ header #search-bar.show {
   /* top: 46px; */
   visibility: visible;
   opacity: 1;
-}
-
-#mobile-nav:has(.show) ~ #search-bar {
-  top: 100px;
 }
 
 #search-bar button {
@@ -1009,6 +1034,7 @@ header #search-bar.show {
   align-items: center;
 }
 
+
 .flex-between {
   display: flex;
   justify-content: space-between;
@@ -1190,9 +1216,10 @@ header #search-bar.show {
 /* Card component */
 .card {
   border: 1px solid #ddd;
-  border-radius: 4px;
+  border-radius: 0.rem;
   padding: 15px;
   margin-bottom: 20px;
+  background-color: #fff;
 }
 
 .card-header {

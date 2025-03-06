@@ -54,7 +54,7 @@
         <div class="swiper hero-swiper" data-aos="fade-left">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <!-- <video controls src="/videos/NextGenCareersTech.mp4">
+              <!-- <video controls src="/videos/NextGenCareersTech.mp4" width="300">
                 Your browser does not support the video tag.
               </video> -->
               <div id="hero-video"></div>
@@ -254,7 +254,7 @@
       referrerpolicy="no-referrer"
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/react-video-audio-player@1.3.2/dist/index.umd.min.js"></script>
-<!-- 
+    <!-- 
     <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
     <script>
       function addDarkmodeWidget() {
@@ -288,6 +288,16 @@
         },
       });
 
+      window.addEventListener("load", () => {
+        // Initialise AOS
+        AOS.init({
+          duration: 1000,
+          easing: "ease-in-out",
+          once: false,
+          mirror: true,
+        });
+      });
+
       if (typeof Swiper !== "undefined") {
         // Initialise React Video Audio Player
         const video = document.getElementById("hero-video");
@@ -313,7 +323,11 @@
                   <div class="story-card">
                     <div class="story-header">
                       <img
-                        src="https://placehold.co/600x400"
+                        src="${
+                          story.image
+                            ? story.image
+                            : "https://t4.ftcdn.net/jpg/07/57/23/43/360_F_757234319_G3HIDoyf67dBZFVcI2kXbVi8yBu37rdJ.jpg"
+                        }"
                         alt="${story.name} Image"
                         class="story-image"
                       />
@@ -326,7 +340,9 @@
                       <p class="text-gray text-xl">
                         "${story.details}"
                       </p>
-                      <a href="${story.read_more}" class="text-primary hover-underline">
+                      <a href="${
+                        story.read_more
+                      }" target="_blank" class="text-primary hover-underline">
                         Read more
                         <i class="bx bx-link-external"></i>
                       </a>

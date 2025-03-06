@@ -17,9 +17,10 @@
     <!-- Hero Section -->
     <section
       class="flex-center hero gap-10 px-10 py-10 lg-flex-row flex-col mt-2"
+      data-aos="fade-up"
     >
       <div class="flex flex-col space-y-2">
-        <h1 id="hero-text">Explore Your Career Pathways</h1>
+        <h1 id="hero-text">Welcome To The Hub</h1>
         <p class="text-lg text-gray">
           Struggling with what to do after school but interested in
           technology?<br />
@@ -34,7 +35,7 @@
     </section>
 
     <!-- Explore Career Pathways Section -->
-    <section id="explore-careers" class="my-10">
+    <section id="explore-careers" class="my-10" data-aos="fade-up">
       <div class="px-4">
         <div class="explore-careers-header">
           <div class="flex-center flex-col">
@@ -54,9 +55,9 @@
               style, and goals.
             </p>
             <div class="flex-center">
-              <a href="/data/CareerQ.html#quiz-section" class="btn btn-primary">
-                Take the Career Quiz <i class="bx bx-right-arrow-alt"></i>
-              </a>
+              <button class="btn btn-primary" id="quizBtn">
+                Take the Career Quiz <i class="bx bx-question-mark"></i>
+              </button>
             </div>
           </div>
           <div class="explore-careers-cards">
@@ -110,6 +111,286 @@
       <!-- Content will be dynamically loaded here -->
     </section>
 
+    <div class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="text-primary text-center">Tech Career Quiz</h1>
+          <span
+            class="bx bx-x text-red text-2xl cursor-pointer"
+            id="close"
+          ></span>
+        </div>
+        <div class="px-10">
+          <div id="quest-ans">
+            <form id="quizForm">
+              <div class="question">
+                <h3>Do you enjoy coding?</h3>
+                <label
+                  ><input
+                    type="radio"
+                    name="q1"
+                    value="Software Engineer,Front End Developer/Web Designer,Back End Developer"
+                    required
+                  />
+                  Yes! That's why I want to get into tech</label
+                ><br />
+                <label
+                  ><input
+                    type="radio"
+                    name="q1"
+                    value="Cyber Security Analyst,Game Developer"
+                    required
+                  />
+                  Sure, I find it fun</label
+                ><br />
+                <label
+                  ><input
+                    type="radio"
+                    name="q1"
+                    value="UI/UX Designer,Product Manager,Cloud Engineer"
+                    required
+                  />
+                  Not particularly my strength</label
+                ><br />
+              </div>
+              <div class="question">
+                <p>How would your friends describe you?</p>
+                <label
+                  ><input
+                    type="radio"
+                    name="q2"
+                    value="Game Developer,Front End Developer/Web Designer,UI/UX Designer"
+                    required
+                  />
+                  Creative</label
+                ><br />
+                <label
+                  ><input
+                    type="radio"
+                    name="q2"
+                    value="Back End Developer,Software Engineer"
+                    required
+                  />
+                  Reserved </label
+                ><br />
+                <label
+                  ><input
+                    type="radio"
+                    name="q2"
+                    value="Product Manager"
+                    required
+                  />
+                  A Leader</label
+                ><br />
+                <label
+                  ><input
+                    type="radio"
+                    name="q2"
+                    value="Cloud Engineer,Cyber Security Analyst"
+                    required
+                  />
+                  Supportive</label
+                >
+              </div>
+              <div class="question">
+                <p>What kind of working environment do you prefer?</p>
+                <label
+                  ><input
+                    type="radio"
+                    name="q3"
+                    value="Cloud Engineer,UI/UX Designer"
+                    required
+                  />
+                  With other people</label
+                ><br />
+                <label
+                  ><input
+                    type="radio"
+                    name="q3"
+                    value="Back End Developer,Software Engineer"
+                    required
+                  />
+                  By myself for important things</label
+                ><br />
+                <label
+                  ><input
+                    type="radio"
+                    name="q3"
+                    value="Product Manager"
+                    required
+                  />
+                  I don't mind as long as I am in charge!</label
+                ><br />
+                <label
+                  ><input
+                    type="radio"
+                    name="q3"
+                    value="Game Developer,Front End Developer/Web Designer"
+                    required
+                  />
+                  Only with my friends</label
+                >
+              </div>
+              <div class="question">
+                <p>If you were a painting, what would you be?</p>
+                <label
+                  ><input
+                    type="radio"
+                    name="q4"
+                    value="Product Manager"
+                    required
+                  />
+                  Mona Lisa</label
+                ><br />
+                <label
+                  ><input
+                    type="radio"
+                    name="q4"
+                    value="Cloud Engineer,UI/UX Designer"
+                    required
+                  />
+                  A sunrise</label
+                ><br />
+                <label
+                  ><input
+                    type="radio"
+                    name="q4"
+                    value="Cyber Security Analyst,Back End Developer"
+                    required
+                  />
+                  An abstract symbolic piece</label
+                ><br />
+                <label
+                  ><input
+                    type="radio"
+                    name="q4"
+                    value="Game Developer,Front End Developer/Web Designer"
+                    required
+                  />
+                  A galaxy expanding</label
+                >
+              </div>
+              <div class="question">
+                <p>How difficult is it for you to juggle multiple ideas?</p>
+                <label
+                  ><input
+                    type="radio"
+                    name="q5"
+                    value="Back End Developer,Software Engineer,Cyber Security Analyst"
+                    required
+                  />
+                  Difficult, I like one clear task</label
+                ><br />
+                <label
+                  ><input
+                    type="radio"
+                    name="q5"
+                    value="UI/UX Designer,Cloud Engineer,Product Manager"
+                    required
+                  />
+                  The more things to do the better</label
+                >
+              </div>
+              <div class="question">
+                <p>In your friendship group, what member are you??</p>
+                <label
+                  ><input
+                    type="radio"
+                    name="q6"
+                    value="Product Manager"
+                    required
+                  />
+                  The leader of the pack</label
+                ><br />
+                <label
+                  ><input
+                    type="radio"
+                    name="q6"
+                    value="Game Developer,Front End Developer/Web Designer,UI/UX Designer"
+                    required
+                  />
+                  Glued to your closest friend</label
+                ><br />
+                <label
+                  ><input
+                    type="radio"
+                    name="q6"
+                    value="Cloud Engineer,Cyber Security Analyst"
+                    required
+                  />
+                  Just happy to be there</label
+                >
+              </div>
+              <div class="question">
+                <p>Does the possibility of AI excite you?</p>
+                <label
+                  ><input
+                    type="radio"
+                    name="q7"
+                    value="Software Engineer,Game Developer,Cloud Engineer"
+                    required
+                  />
+                  Yes, I use it all the time</label
+                ><br />
+                <label
+                  ><input
+                    type="radio"
+                    name="q7"
+                    value="Back End Developer"
+                    required
+                  />
+                  I have actually created my own AI</label
+                ><br />
+                <label
+                  ><input
+                    type="radio"
+                    name="q7"
+                    value="Product Manager,Cyber Security Analyst"
+                    required
+                  />
+                  Yes, but I'm scared about the social and moral impacts</label
+                ><br />
+                <label
+                  ><input
+                    type="radio"
+                    name="q7"
+                    value="Front End Developer/Web Designer,UI/UX Designer"
+                    required
+                  />
+                  I want to become AI LOL</label
+                >
+              </div>
+            </form>
+
+            <div class="flex-center gap-5">
+              <button
+                id="prevBtn"
+                class="btn btn-primary"
+                onclick="changeQuestion(-1)"
+                disabled
+              >
+                Prev
+              </button>
+              <button
+                id="nextBtn"
+                class="btn btn-primary"
+                onclick="changeQuestion(1)"
+              >
+                Next
+              </button>
+            </div>
+          </div>
+          <h2 id="result"></h2>
+          <div class="flex-center gap-5" id="result-buttons" style="display: none">
+            <button class="btn btn-secondary" onclick="restartQuiz()">Restart</button>
+            <button class="btn btn-primary" onclick="window.location.href='resources.html'">
+              Visit Resources
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script src="/js/index.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
@@ -123,7 +404,7 @@
             const entryLevel = data.entryLevel;
 
             section.innerHTML = `
-              <div id="university">
+              <div id="university" data-aos="fade-up">
                 <div class="grid">
                   <div>
                     <h2 class="title">${university.title}</h2>
@@ -201,7 +482,13 @@
                           <h4 class="card-title">${source.source}</h4>
                         </div>
                         <div class="card-content">
-                          <p class="description">${source.description} <a href="${source.link}" target="_blank">Learn more</a></p>
+                          <p class="description">${source.description} 
+                            ${
+                              source.link
+                                ? `<a href="${source.link}" target="_blank">Learn more</a>`
+                                : ""
+                            }
+                            </p>
                         </div>
                       </div>
                     `
@@ -211,7 +498,7 @@
                 </div>
               </div>
 
-              <div id="apprenticeships">
+              <div id="apprenticeships" data-aos="fade-up">
                 <div class="grid">
                   <div>
                     <h2 class="title">${apprenticeships.title}</h2>
@@ -299,7 +586,7 @@
                 </div>
               </div>
 
-              <div id="entry-level">
+              <div id="entry-level" data-aos="fade-up">
                 <div class="grid">
                   <div>
                     <h2 class="title">${entryLevel.title}</h2>
@@ -424,7 +711,7 @@
                 </div>
               </div>
 
-              <div id="bootcamps">
+              <div id="bootcamps" data-aos="fade-up">
                 <div class="grid">  
                   <div>
                     <h2 class="title">${bootcamps.title}</h2>
@@ -520,6 +807,111 @@
             `;
           })
           .catch((error) => console.error("Error fetching data:", error));
+      });
+    </script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+      integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script>
+      // on click of the quiz button, show the modal
+      document.getElementById("quizBtn").addEventListener("click", function () {
+        document.querySelector(".modal").classList.add("show");
+      });
+      // on click of the close button, hide the modal
+      document.getElementById("close").addEventListener("click", function () {
+        document.querySelector(".modal").classList.remove("show");
+      });
+
+      let currentQuestion = 0;
+      const questions = document.querySelectorAll(".question");
+      const prevBtn = document.getElementById("prevBtn");
+      const nextBtn = document.getElementById("nextBtn");
+      const quizForm = document.getElementById("quizForm");
+      const resultButtons = document.getElementById("result-buttons");
+
+      function showQuestion(index) {
+        questions.forEach((question, i) => {
+          question.style.display = i === index ? "block" : "none";
+        });
+        prevBtn.disabled = index === 0;
+        nextBtn.innerText = index === questions.length - 1 ? "Submit" : "Next";
+      }
+
+      function changeQuestion(direction) {
+        if (currentQuestion + direction >= questions.length) {
+          calculateResult();
+          return;
+        }
+        const answer = document.querySelector(
+          `input[name="q${currentQuestion + 1}"]:checked`
+        );
+        if (!answer && direction === 1) {
+          alert("Please answer the question before proceeding.");
+          return;
+        }
+        currentQuestion += direction;
+        showQuestion(currentQuestion);
+      }
+
+      function calculateResult() {
+        const answers = document.querySelectorAll(
+          'input[type="radio"]:checked'
+        );
+        let careerCount = {
+          "Software Engineer": 0,
+          "Game Developer": 0,
+          "Cloud Engineer": 0,
+          "Back End Developer": 0,
+          "Product Manager": 0,
+          "Cyber Security Analyst": 0,
+          "Front End Developer/Web Designer": 0,
+          "UI/UX Designer": 0,
+        };
+
+        // Loop through each selected answer
+        answers.forEach((answer) => {
+          let careers = answer.value.split(","); // Split multiple careers by commas
+          careers.forEach((career) => {
+            if (careerCount[career] !== undefined) {
+              careerCount[career]++; // Increase count if career exists
+            }
+          });
+        });
+
+        // Find the career with the highest count
+        let highestCareer = Object.keys(careerCount).reduce((a, b) =>
+          careerCount[a] > careerCount[b] ? a : b
+        );
+        document.getElementById(
+          "result"
+        ).innerHTML = `Your suggested career is: ${highestCareer} <br><img src="/images/yay.gif" alt="Yay!">`;
+        document.getElementById("quest-ans").style.display = "none";
+        resultButtons.style.display = "block";
+      }
+
+      function restartQuiz() {
+        currentQuestion = 0;
+        showQuestion(currentQuestion);
+        quizForm.style.display = "block";
+        resultButtons.style.display = "none";
+        document.getElementById("result").innerText = "";
+        quizForm.reset();
+      }
+
+      showQuestion(currentQuestion);
+     
+      window.addEventListener("load", () => {
+        // Initialise AOS
+        AOS.init({
+          duration: 1000,
+          easing: "ease-in-out",
+          once: false,
+          mirror: true,
+        });
       });
     </script>
   </body>

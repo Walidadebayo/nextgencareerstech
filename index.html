@@ -386,6 +386,16 @@
             const icon = item.querySelector(".faq-question i");
 
             question.addEventListener("click", () => {
+              faqItems.forEach((faq) => {
+                if (faq !== item && faq.classList.contains("active")) {
+                  faq.classList.remove("active");
+                  faq.querySelector(".faq-answer").style.maxHeight = "0";
+                  faq
+                    .querySelector(".faq-question i")
+                    .classList.replace("bx-chevron-left", "bx-x");
+                }
+              });
+
               item.classList.toggle("active");
 
               if (item.classList.contains("active")) {

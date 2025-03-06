@@ -82,4 +82,30 @@ window.addEventListener("load", () => {
       document.getElementById("current-year").innerText =
         new Date().getFullYear();
     });
+
+  // Create "Back to Top" button
+  const backToTopButton = document.createElement("button");
+  const arrowUP = document.createElement("i");
+  arrowUP.className = "bx bx-up-arrow-alt";
+  backToTopButton.appendChild(arrowUP);
+  backToTopButton.className = "btn btn-primary";  
+  backToTopButton.style.position = "fixed";
+  backToTopButton.style.bottom = "20px";
+  backToTopButton.style.left = "20px";
+  backToTopButton.style.display = "none";
+  document.body.appendChild(backToTopButton);
+
+  // Show button when scrolled down 100px
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 100) {
+      backToTopButton.style.display = "block";
+    } else {
+      backToTopButton.style.display = "none";
+    }
+  });
+
+  // Scroll to top when button is clicked
+  backToTopButton.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
 });

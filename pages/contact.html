@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles/index.css" />
+    <link rel="stylesheet" href="/styles/contact.css" />
+  </head>
+
+  <body>
+    <main class="px-8">
+      <!-- Hero Section -->
+      <section
+        class="flex-center hero gap-10 px-10 py-10 lg-flex-row flex-col mt-2"
+      >
+        <div class="flex flex-col space-y-2">
+          <h1 id="hero-text">Tech Career Paths</h1>
+          <p class="text-lg text-gray">
+            Explore various tech career paths, their roles, and the skills you
+            will learn.
+          </p>
+          <button class="scroll-btn" onclick="scrollToFAQ()">
+            Jump to FAQ
+          </button>
+        </div>
+        <img src="/images/contact-us-image.png" alt="Hero Image" />
+      </section>
+
+      <div class="flex lg-flex-row flex-col gap-10 justify-center my-10">
+        <section class="contact-form">
+          <h2>Not what you where looking for? Get in Touch</h2>
+          <form
+            id="contactForm"
+            action="https://formspree.io/f/xeoeybzz"
+            method="POST"
+          >
+            <div>
+              <label for="name"> Your name: </label>
+              <input type="text" id="name" name="name" required />
+              <p id="nameError" class="text-red"></p>
+            </div>
+            <div>
+              <label for="email"> Your email: </label>
+              <input type="email" id="email" name="email" required />
+              <p id="emailError" class="text-red"></p>
+            </div>
+            <div>
+              <label for="inquiry"> Inquiry type: </label>
+              <select id="inquiry" name="inquiry" required>
+                <option value="General Inquiry">General Inquiry</option>
+                <option value="Career Advice">Career Advice</option>
+                <option value="Resource Request">Resource Request</option>
+              </select>
+            </div>
+            <div>
+              <label for="subject"> Subject: </label>
+              <input type="text" id="subject" name="subject" required />
+              <p id="subjectError" class="text-red"></p>
+            </div>
+            <div>
+              <label> Your message: </label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                required
+              ></textarea>
+              <p id="messageError" class="text-red"></p>
+            </div>
+            <div class="text-end">
+              <button class="btn btn-primary" type="submit">Send</button>
+            </div>
+          </form>
+        </section>
+        <section class="contact-info">
+          <h2>Our Office</h2>
+          <p>
+            <strong>Email:</strong>
+            <a href="mailto:nextgencareerstech@gmail.com">
+              nextgencareerstech@gmail.com
+            </a>
+          </p>
+          <p>
+            <strong>Phone:</strong>
+            <a href="tel:+441234567890">+44 1234 567890</a>
+          </p>
+          <p>
+            <strong>Address:</strong> Norfolk House, 2nd Floor, Smallbrook
+            Queensway, Birmingham, B5 4LJ
+          </p>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2430.1440947456695!2d-1.8998302233214943!3d52.47652667204974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4870bc89a4272823%3A0x849c3718593ef641!2sNorfolk%20House!5e0!3m2!1sen!2suk!4v1741185762139!5m2!1sen!2suk"
+            width="100%"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </section>
+      </div>
+
+      <section class="faq-section rounded-2xl px-8">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-container">
+          <!--FAQ question1-->
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>What is NextGenCareersTech?</span>
+              <i class="bx bx-x"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                NextGenCareersTech is a platform dedicated to helping
+                individuals build successful careers in technology or something
+                like that .
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script>
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", function (event) {
+          const name = document.getElementById("name").value;
+          const email = document.getElementById("email").value;
+          const subject = document.getElementById("subject").value;
+          const message = document.getElementById("message").value;
+
+          const namePattern = /^[a-zA-Z\s]+$/;
+          const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          const subjectPattern = /^[a-zA-Z0-9\s]+$/;
+
+          let isValid = true;
+
+          if (!namePattern.test(name)) {
+            document.getElementById("nameError").textContent =
+              "Name must not contain any symbols or numbers.";
+            isValid = false;
+          } else if (name.length < 2) {
+            document.getElementById("nameError").textContent =
+              "Name must be more than 2 characters.";
+            isValid = false;
+          } else {
+            document.getElementById("nameError").textContent = "";
+          }
+
+          if (!emailPattern.test(email)) {
+            document.getElementById("emailError").textContent =
+              "Please enter a valid email address.";
+            isValid = false;
+          } else {
+            document.getElementById("emailError").textContent = "";
+          }
+
+          if (message.length < 20) {
+            document.getElementById("messageError").textContent =
+              "Message must be more than 20 characters.";
+            isValid = false;
+          } else {
+            document.getElementById("messageError").textContent = "";
+          }
+
+          if (!subjectPattern.test(subject)) {
+            document.getElementById("subjectError").textContent =
+              "Subject must only contain letters, numbers, and spaces.";
+            isValid = false;
+          } else {
+            document.getElementById("subjectError").textContent = "";
+          }
+
+          if (!isValid) {
+            event.preventDefault();
+          }
+        });
+
+      fetch("/data/faq.json")
+        .then((response) => response.json())
+        .then((data) => {
+          const faqContainer = document.querySelector(".faq-container");
+          data.forEach((faq) => {
+            const faqItem = document.createElement("div");
+            faqItem.classList.add("faq-item");
+            faqItem.innerHTML = `
+            <div class="faq-question">
+              <span>${faq.question}</span>
+              <i class="bx bx-x"></i>
+            </div>
+            <div class="faq-answer">
+              <p>${faq.answer}</p>
+            </div>
+          `;
+            faqContainer.appendChild(faqItem);
+          });
+          const faqItems = document.querySelectorAll(".faq-item");
+
+          faqItems.forEach((item) => {
+            const question = item.querySelector(".faq-question");
+            const answer = item.querySelector(".faq-answer");
+            const icon = item.querySelector(".faq-question i");
+
+            question.addEventListener("click", () => {
+              faqItems.forEach((faq) => {
+                if (faq !== item && faq.classList.contains("active")) {
+                  faq.classList.remove("active");
+                  faq.querySelector(".faq-answer").style.maxHeight = "0";
+                  faq
+                    .querySelector(".faq-question i")
+                    .classList.replace("bx-chevron-left", "bx-x");
+                }
+              });
+
+              item.classList.toggle("active");
+
+              if (item.classList.contains("active")) {
+                answer.style.maxHeight = answer.scrollHeight + "px";
+                icon.classList.replace("bx-x", "bx-chevron-left");
+              } else {
+                answer.style.maxHeight = "0";
+                icon.classList.replace("bx-chevron-left", "bx-x");
+              }
+            });
+          });
+        });
+
+      function scrollToFAQ() {
+        document
+          .querySelector(".faq-section")
+          .scrollIntoView({ behavior: "smooth" });
+      }
+    </script>
+
+    <script src="/js/index.js"></script>
+  </body>
+</html>

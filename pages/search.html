@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search | NextGenCareersTech</title>
+    <link rel="stylesheet" href="/styles/search.css" />
+    <link rel="stylesheet" href="/styles/index.css" />
+  </head>
+  <body>
+    <section id="search-opp">
+      <div class="px-8">
+        <div class="content">
+          <div class="text-content">
+            <h1>Search Opportunities</h1>
+            <p>
+              Find universities, apprenticeships, bootcamps, and entry-level
+              jobs in technology.
+            </p>
+          </div>
+          <div class="form-container">
+            <form onsubmit="handleSearchSubmit(event)" class="form">
+              <div class="input-container">
+                <span class="search-icon bx bx-search"></span>
+                <input
+                  type="search"
+                  placeholder="Search for keywords, skills, or locations..."
+                  value=""
+                  onchange="handleSearchChange(event)"
+                />
+              </div>
+              <button type="submit" class="btn btn-primary">Search</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="search-results" class="px-8 my-10">
+      <div class="px-8">
+        <div class="content">
+          <div class="text-content">
+            <h1>Search Results</h1>
+            <p>Explore the opportunities that match your search.</p>
+          </div>
+          <div class="results-container">
+            <div id="result-tabs">
+              <button
+                id="tab-apprenticeships"
+                onclick="showTab('apprenticeships')"
+              >
+                Apprenticeships
+              </button>
+              <button id="tab-universities" onclick="showTab('universities')">
+                Universities
+              </button>
+              <button id="tab-jobs" onclick="showTab('jobs')">Jobs</button>
+              <button id="tab-bootcamps" onclick="showTab('bootcamps')">
+                Bootcamps
+              </button>
+            </div>
+            <div id="apprenticeships" class="result-tab"></div>
+            <div id="universities" class="result-tab"></div>
+            <div id="jobs" class="result-tab"></div>
+            <div id="bootcamps" class="result-tab"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="/js/index.js"></script>
+    <script>
+      function showTab(tabId) {
+        const tabs = document.querySelectorAll(".result-tab");
+        tabs.forEach((tab) => (tab.style.display = "none"));
+        document.getElementById(tabId).style.display = "block";
+
+        const tabButtons = document.querySelectorAll("#result-tabs button");
+        tabButtons.forEach((button) => button.classList.remove("active"));
+        document.getElementById("tab-" + tabId).classList.add("active");
+
+        searchCareers(tabId);
+      }
+
+      function searchCareers(tabId) {
+        const query =
+          window.location.search.split("=")[1] ||
+          document.querySelector('input[type="search"]').value;
+        if (!query) {
+          alert("Please enter a search query!");
+          return;
+        }
+
+        const apiUrls = {
+          apprenticeships:
+            "https://api.apprenticeships.education.gov.uk/vacancies/vacancy?search=",
+          universities: "https://discoveruni.gov.uk/api/courses?search=",
+          jobs: "https://api.adzuna.com/v1/api/jobs/gb/search/1?app_id=YOUR_APP_ID&app_key=YOUR_APP_KEY&results_per_page=5&what=",
+          bootcamps: "https://www.coursereport.com/api/v1/courses?query=",
+        };
+
+        document.getElementById(tabId).innerHTML = "Loading...";
+
+        fetch(apiUrls[tabId] + query, {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            ...(tabId === "apprenticeships" && { "Ocp-Apim-Subscription-Key": 123 })
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            let output = "<ul>";
+            if (tabId === "apprenticeships") {
+              data.vacancies.forEach((item) => {
+                output += `<li><strong>${item.title}</strong> at ${item.employer}</li>`;
+              });
+            } else if (tabId === "universities") {
+              data.courses.forEach((item) => {
+                output += `<li>${item.name} at ${item.university}</li>`;
+              });
+            } else if (tabId === "jobs") {
+              data.results.forEach((item) => {
+                output += `<li>${item.title} - ${item.company.display_name}</li>`;
+              });
+            } else if (tabId === "bootcamps") {
+              data.courses.forEach((item) => {
+                output += `<li>${item.name} - ${item.school.name}</li>`;
+              });
+            }
+            output += "</ul>";
+            document.getElementById(tabId).innerHTML = output;
+          })
+          .catch(
+            () =>
+              (document.getElementById(tabId).innerHTML = "No results found.")
+          );
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        showTab("apprenticeships");
+      });
+    </script>
+  </body>
+</html>

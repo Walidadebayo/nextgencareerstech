@@ -1,0 +1,392 @@
+{
+    "university": {
+        "title": "University Degrees",
+        "description": "A university degree in a technology-related field provides a comprehensive foundation of knowledge and skills. These programmes typically take 3-4 years to complete and offer a mix of theoretical understanding and practical application.",
+        "popularDegreePrograms": [
+            "Computer Science",
+            "Software Engineering",
+            "Cybersecurity",
+            "Data Science",
+            "Artificial Intelligence",
+            "Web Development",
+            "Game Development"
+        ],
+        "isRightForYou": "University is ideal if you prefer structured learning, want a comprehensive education that covers both theory and practice, and are willing to invest several years in your education. It's also a good choice if you're interested in research or academic careers.",
+        "keyBenefits": [
+            "Comprehensive education covering theory and practice",
+            "Widely recognised qualification by employers",
+            "Access to university resources, facilities, and networks",
+            "Opportunities for internships and industry connections",
+            "Potential for higher starting salaries in some sectors",
+            "Comprehensive education – strong theoretical and practical knowledge base.",
+            "Career advancement – many high-paying jobs require a degree qualification.",
+            "Networking – access to professors, alumni, and industry professionals.",
+            "Extracurricular opportunities – student societies, hackathons, and research projects enhance career readiness."
+        ],
+        "considerations": [
+            "Financial cost – tuition fees and living expenses can lead to significant student debt.",
+            "Time commitment – degrees typically take three to four years to complete.",
+            "Competitive job market – experience is often required alongside academic qualifications.",
+            "Self-discipline – university studies require strong time management and independent learning skills."
+        ],
+        "findingRightUniversity": [
+            "Programme curriculum and specialisations offered",
+            "Industry connections and placement rates",
+            "Facilities and resources (labs, equipment, software)",
+            "Scholarship and funding opportunities",
+            "Location and cost of living"
+        ],
+        "applicationProcess": [
+            {
+                "step": "1. Research and Choose",
+                "description": "Research universities and programmes that match your interests. Consider attending open days and speaking with current students."
+            },
+            {
+                "step": "2. Apply via UCAS",
+                "description": "Most UK university applications are processed through UCAS. You'll need to write a personal statement and provide references.",
+                "link": "https://www.ucas.com"
+            },
+            {
+                "step": "3. Finance and Preparation",
+                "description": "Apply for student finance, scholarships, and prepare for your studies by completing any recommended pre-university courses.",
+                "link": "https://www.gov.uk/student-finance"
+            }
+        ],
+        "whereToFindInformation": [
+            {
+                "source": "UCAS",
+                "description": "The central organization through which applications are processed for full-time undergraduate courses at UK universities.",
+                "link": "https://www.ucas.com"
+            },
+            {
+                "source": "Prospects",
+                "description": "A comprehensive resource for university and career information, including course listings and career advice.",
+                "link": "https://www.prospects.ac.uk"
+            },
+            {
+                "source": "Discover Uni",
+                "description": "Provides official information about higher education courses in the UK, including student satisfaction and employment outcomes.",
+                "link": "https://www.discoveruni.gov.uk"
+            },
+            {
+                "source": "University Websites",
+                "description": "Directly visit university websites for detailed information on courses, application processes, and entry requirements."
+            },
+            {
+                "source": "The Guardian University Guide 2025",
+                "description": "Comprehensive guide to UK universities, including rankings and reviews.",
+                "link": "https://www.theguardian.com/education/universityguide"
+            },
+            {
+                "source": "UniversityCompare",
+                "description": "Compare universities based on courses, rankings, and student reviews.",
+                "link": "https://www.universitycompare.com"
+            },
+            {
+                "source": "The Complete University Guide",
+                "description": "Independent UK university rankings, course information, and student advice.",
+                "link": "https://www.thecompleteuniversityguide.co.uk"
+            }
+        ]
+    },
+    "apprenticeships": {
+        "title": "Tech Apprenticeships",
+        "description": "Apprenticeships combine on-the-job training with academic study, allowing you to earn while you learn. Tech apprenticeships typically last 1-4 years and provide a direct pathway into the industry with practical, hands-on experience.",
+        "types": [
+            "Software Development",
+            "IT Support and Infrastructure",
+            "Digital Marketing",
+            "Data Analysis",
+            "Cybersecurity",
+            "Network Engineering",
+            "UX/UI Design"
+        ],
+        "isRightForYou": "Apprenticeships are ideal if you prefer learning by doing, want to start earning immediately, and value workplace experience. They're perfect for practical learners who want to avoid student debt while gaining industry-recognised qualifications.",
+        "keyBenefits": [
+            "Earn a salary while learning",
+            "Gain practical, hands-on experience",
+            "No student debt",
+            "Industry-recognised qualifications",
+            "Direct pathway to employment",
+            "Learn from experienced professionals",
+            "Earn while you learn – no student debt while gaining practical skills.",
+            "Direct industry experience – work with professionals in real-world environments.",
+            "Fast-track career growth – start working earlier and gain years of experience.",
+            "Industry recognition – qualifications and certifications relevant to the job market."
+        ],
+        "considerations": [
+            "Balancing work and study – apprentices must manage job responsibilities alongside coursework.",
+            "Limited flexibility – training programs follow a set structure and may not allow for much deviation.",
+            "Competitive entry – high demand for reputable apprenticeships makes securing a position challenging.",
+            "Varied quality – some apprenticeships offer better career prospects than others; researching providers is crucial."
+        ],
+        "findingApprenticeships": [
+            "Government apprenticeship websites",
+            "Tech company career pages",
+            "Apprenticeship training providers",
+            "Industry events and career fairs"
+        ],
+        "topCompanies": [
+            {
+                "company": "Accenture",
+                "description": "Software Development, Data Analysis, and Cybersecurity apprenticeships.",
+                "link": "https://www.accenture.com/gb-en/careers/apprenticeships"
+            },
+            {
+                "company": "Google",
+                "description": "Digital Marketing, IT Support, and Software Development apprenticeships.",
+                "link": "https://careers.google.com/programs/apprentices/"
+            },
+            {
+                "company": "IBM",
+                "description": "Software Development, Data Analysis, and Cybersecurity apprenticeships.",
+                "link": "https://www.ibm.com/uk-en/employment/entrylevel/"
+            },
+            {
+                "company": "BT",
+                "description": "Network Engineering, Software Engineering, and IT apprenticeships.",
+                "link": "https://www.bt.com/careers/early-careers/apprentices"
+            },
+            {
+                "company": "BBC",
+                "description": "Software Engineering, UX Design, and Digital Media apprenticeships.",
+                "link": "https://www.bbc.co.uk/careers/trainee-schemes-and-apprenticeships"
+            }
+        ],
+        "whereToFindInformation": [
+            {
+                "source": "Apprenticeships.gov.uk",
+                "description": "Official government website for apprenticeship opportunities in the UK.",
+                "link": "https://www.apprenticeships.gov.uk"
+            },
+            {
+                "source": "GetMyFirstJob",
+                "description": "Platform to find and apply for apprenticeships and early career opportunities.",
+                "link": "https://www.getmyfirstjob.co.uk"
+            },
+            {
+                "source": "RateMyApprenticeship",
+                "description": "Reviews and ratings of apprenticeship programs from current and past apprentices.",
+                "link": "https://www.ratemyapprenticeship.co.uk"
+            },
+            {
+                "source": "NotGoingToUni",
+                "description": "Alternative options to university, including apprenticeships and vocational training.",
+                "link": "https://www.notgoingtouni.co.uk"
+            }
+        ]
+    },
+    "bootcamps": {
+        "title": "Coding Bootcamps",
+        "description": "Coding bootcamps are intensive, short-term training programmes designed to equip students with job-ready tech skills in a matter of months. They focus on practical skills and project-based learning with curricula aligned to industry needs.",
+        "specialisations": [
+            "Full-Stack Web Development",
+            "Front-End Development",
+            "Data Science and Analytics",
+            "UX/UI Design",
+            "Cybersecurity",
+            "Mobile App Development"
+        ],
+        "isRightForYou": "Bootcamps are ideal if you want to quickly transition into a tech career, prefer intensive, focused learning, and are motivated to learn a lot in a short time. They work well for career changers and those who learn best through practical application.",
+        "keyBenefits": [
+            "Fast-track to job-ready skills (typically 3-6 months)",
+            "Focused, practical curriculum aligned with industry needs",
+            "Project-based learning with portfolio development",
+            "Career support services and job placement assistance",
+            "Networking opportunities with industry professionals"
+        ],
+        "considerations": [
+            "Intensive learning – bootcamps require a significant time commitment and can be mentally demanding.",
+            "Cost – bootcamps can be expensive, and financing options may vary.",
+            "Job placement – while many bootcamps offer job placement assistance, outcomes can vary.",
+            "Limited scope – bootcamps focus on specific skills and may not provide a comprehensive education.",
+            "Fast-paced – the rapid learning environment may not suit everyone."
+        ],
+        "choosingBootcamp": [
+            "Curriculum and technologies taught",
+            "Job placement rates and employer partnerships",
+            "Instructor qualifications and student-to-teacher ratio",
+            "Cost and financing options",
+            "Format (in-person, online, or hybrid)",
+            "Alumni reviews and success stories"
+        ],
+        "preparingBootcamp": [
+            {
+                "step": "1. Learn the Basics",
+                "description": "Complete free online tutorials to learn programming fundamentals before starting. Many bootcamps have pre-work requirements.",
+                "link": "https://www.freecodecamp.org"
+            },
+            {
+                "step": "2. Research Financing",
+                "description": "Explore payment options including scholarships, income share agreements, and government-backed loans for skills training.",
+                "link": "https://www.skillsfund.com"
+            },
+            {
+                "step": "3. Prepare Mentally",
+                "description": "Bootcamps are intensive. Prepare for long hours, challenging work, and a fast pace. Organise your life to focus fully on learning."
+            }
+        ],
+        "whereToFindInformation": [
+            {
+                "source": "Code Institute",
+                "description": "Offers a range of coding bootcamps and online courses in software development.",
+                "link": "https://www.codeinstitute.net"
+            },
+            {
+                "source": "Northcoders",
+                "description": "Coding bootcamp offering full-time and part-time courses in software development.",
+                "link": "https://www.northcoders.com"
+            },
+            {
+                "source": "Course Report",
+                "description": "Comprehensive reviews and ratings of coding bootcamps worldwide.",
+                "link": "https://www.coursereport.com"
+            },
+            {
+                "source": "SwitchUp",
+                "description": "Bootcamp reviews, rankings, and career resources for tech education.",
+                "link": "https://www.switchup.org"
+            },
+            {
+                "source": "Career Karma",
+                "description": "Community and resources for finding and succeeding in coding bootcamps.",
+                "link": "https://www.careerkarma.com"
+            },
+            {
+                "source": "Codebar",
+                "description": "Free coding workshops and mentorship for under represented groups in tech.",
+                "link": "https://codebar.io"
+            }
+        ]
+    },
+    "entryLevel": {
+        "title": "Entry-Level Tech Jobs",
+        "description": "Entry-level positions are designed for beginners with minimal experience but a willingness to learn on the job. These roles can be a great way to break into the tech industry, especially for self-taught individuals or those with non-traditional backgrounds.",
+        "commonRoles": [
+            "Junior Developer/Programmer",
+            "IT Support Technician",
+            "QA Tester",
+            "Technical Support Specialist",
+            "Junior Data Analyst",
+            "Digital Marketing Assistant",
+            "Junior UX/UI Designer"
+        ],
+        "isRightForYou": "This approach works well if you're self-motivated, have developed skills through self-study or personal projects, and learn best by doing. It's ideal for those who want to start working immediately and continue learning on the job.",
+        "keyBenefits": [
+            "Immediate employment – start earning right after school.",
+            "Real-world experience – learn practical skills in a professional setting.",
+            "Opportunities for growth – potential for promotions and internal training programs.",
+            "Flexible career paths – ability to switch industries based on experience and interests."
+        ],
+        "considerations": [
+            "Lower starting salaries – wages may be lower compared to those with higher education.",
+            "Limited upward mobility – career progression may require additional certifications or experience.",
+            "Fewer job benefits – some entry-level jobs may not offer perks such as health insurance or retirement plans.",
+            "On-the-job pressure – learning while working may come with performance expectations."
+        ],
+        "buildingPortfolio": [
+            "Create personal projects that showcase your skills",
+            "Contribute to open-source projects",
+            "Complete online courses and certifications",
+            "Participate in hackathons and coding challenges",
+            "Document your learning journey (blog, GitHub, etc.)"
+        ],
+        "standingOut": [
+            "Network actively at tech meetup and events",
+            "Tailor your applications to highlight relevant skills",
+            "Prepare thoroughly for technical interviews",
+            "Demonstrate your passion and commitment to learning",
+            "Consider freelance or volunteer work to gain experience"
+        ],
+        "selfLearningResources": {
+            "freePlatforms": [
+                {
+                    "name": "freeCodeCamp",
+                    "link": "https://www.freecodecamp.org"
+                },
+                {
+                    "name": "The Odin Project",
+                    "link": "https://www.theodinproject.com"
+                },
+                {
+                    "name": "Khan Academy",
+                    "link": "https://www.khanacademy.org"
+                },
+                {
+                    "name": "MDN Web Docs",
+                    "link": "https://developer.mozilla.org"
+                },
+                {
+                    "name": "W3Schools",
+                    "link": "https://www.w3schools.com"
+                }
+            ],
+            "paidCourses": [
+                {
+                    "name": "Udemy",
+                    "link": "https://www.udemy.com"
+                },
+                {
+                    "name": "Coursera",
+                    "link": "https://www.coursera.org"
+                },
+                {
+                    "name": "Pluralsight",
+                    "link": "https://www.pluralsight.com"
+                },
+                {
+                    "name": "LinkedIn Learning",
+                    "link": "https://www.linkedin.com/learning"
+                },
+                {
+                    "name": "Codecademy Pro",
+                    "link": "https://www.codecademy.com/pro"
+                }
+            ],
+            "practicePlatforms": [
+                {
+                    "name": "LeetCode",
+                    "link": "https://leetcode.com"
+                },
+                {
+                    "name": "HackerRank",
+                    "link": "https://www.hackerrank.com"
+                },
+                {
+                    "name": "CodeWars",
+                    "link": "https://www.codewars.com"
+                },
+                {
+                    "name": "Frontend Mentor",
+                    "link": "https://www.frontendmentor.io"
+                },
+                {
+                    "name": "GitHub",
+                    "link": "https://github.com"
+                }
+            ]
+        },
+        "whereToFindInformation": [
+            {
+                "source": "Indeed",
+                "description": "Job search engine for finding entry-level tech jobs.",
+                "link": "https://www.indeed.co.uk"
+            },
+            {
+                "source": "Totaljobs",
+                "description": "Job board with a wide range of entry-level tech positions.",
+                "link": "https://www.totaljobs.com"
+            },
+            {
+                "source": "Glassdoor",
+                "description": "Job listings, company reviews, and salary information for entry-level roles.",
+                "link": "https://www.glassdoor.co.uk"
+            },
+            {
+                "source": "Reed",
+                "description": "Job search platform with numerous entry-level tech job opportunities.",
+                "link": "https://www.reed.co.uk"
+            }
+        ]
+    }
+}

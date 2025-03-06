@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Glen Morrison",
+        "story": "From Fish Fryer to Award Winner",
+        "details": "Glen Morrison, a 25-year-old from Inverurie, Scotland, began working at his family's fish and chip shop, Garioch Fish Bar, after his father sustained an injury. Through hard work and commitment, Glen helped to grow the business and won several industry awards. He was recently named the UK’s best young fish fryer at the National Fish and Chip Awards, demonstrating how entry-level roles can lead to recognised success.",
+        "read_more": "https://www.thescottishsun.co.uk/money/14411106/scots-chip-shop-worker-crowned-best-uk/?utm_source=chatgpt.com"
+    },
+    {
+        "name": "Brit School Graduates",
+        "story": "From Students to Industry Leaders",
+        "details": "The Brit School in Croydon, South London, has been a training ground for some of the UK’s biggest creative talents. Alumni such as Adele, Tom Holland, and FKA Twigs all began their journeys here. The school continues to produce exceptional graduates who go on to make a significant impact in the creative industries.",
+        "read_more": "https://www.theguardian.com/the-next-generation-of-talent/2025/feb/28/musicians-to-actors-meet-five-of-the-brit-schools-next-generation-of-bright-young-things?utm_source=chatgpt.com"
+    },
+    {
+        "name": "Alex",
+        "story": "Overcoming Employment Barriers",
+        "details": "After finishing his studies in 2014, Alex struggled to secure a job due to a lack of experience. With the support of organisations like Back Up Trust, he was able to navigate the job market and secure his first role. His story highlights the importance of persistence and seeking support when starting a career.",
+        "read_more": "https://www.backuptrust.org.uk/blog/employment/alexs-story-finding-my-first-job?utm_source=chatgpt.com"
+    },
+    {
+        "name": "Olu",
+        "story": "From Graduate to NHS Medical Scientist",
+        "details": "Olu, a recent university graduate, found it difficult to break into the job market. However, with career advice and determination, he successfully secured a role as a Medical Scientist within the NHS. His journey shows how targeted job search strategies can help new graduates enter professional roles.",
+        "read_more": "https://rkycareers.com/blog/success-story-olu-went-from-fresh-grad-to-nhs/?utm_source=chatgpt.com"
+    },
+    {
+        "name": "Anonymous",
+        "story": "From Admin Assistant to Director",
+        "details": "One individual began their career as a temporary administrative assistant, earning just £6.59 an hour. Over 14 years, through continuous learning and professional development, they worked their way up to a director position with a salary of £95,000 per year. Their story highlights the long-term potential of entry-level jobs.",
+        "read_more": "https://www.mumsnet.com/talk/_chat/4680763-if-you-started-in-a-mediocre-low-paid-job-tell-me-your-success-stories-and-how-you-got-to-your-current-job?utm_source=chatgpt.com"
+    }
+]

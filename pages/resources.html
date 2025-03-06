@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tech Career Paths</title>
+    <link rel="stylesheet" href="/styles/resources.css" />
+    <link rel="stylesheet" href="/styles/index.css" />
+  </head>
+  <body>
+    <main class="px-8">
+      <!-- Hero Section -->
+      <section
+        class="flex-center hero gap-10 px-10 py-10 lg-flex-row flex-col mt-2"
+      >
+        <div class="flex flex-col space-y-2">
+          <h1 id="hero-text">Tech Career Paths</h1>
+          <p class="text-lg text-gray">
+            Explore various tech career paths, their roles, and the skills you
+            will learn.
+          </p>
+          <button class="scroll-btn" onclick="scrollToResources()">
+            Jump to Tech Resources
+          </button>
+        </div>
+        <img src="/images/vr2.jpg" alt="Hero Image" />
+      </section>
+
+      <!-- Career Paths Section -->
+      <section class="px-8 career-paths my-10">
+        <h1>Tech Career Paths</h1>
+        <h2>What They Do & Skills You Will Learn</h2>
+
+        <div class="career-grid">
+          <div class="career">
+            <h3>Software Developer / Software Engineer</h3>
+            <p>
+              Develop applications, websites, and software solutions. Write, test,
+              and maintain code.
+            </p>
+            <p class="skills">Skills: Python, JavaScript, Java, C#, Git, Agile</p>
+            <p class="pathways">
+              Pathways: University, Apprenticeships, Bootcamps
+            </p>
+          </div>
+
+          <div class="career">
+            <h3>Front-End Developer</h3>
+            <p>
+              Build the visual and interactive parts of websites and applications.
+            </p>
+            <p class="skills">Skills: HTML, CSS, JavaScript, React, UX/UI</p>
+            <p class="pathways">
+              Pathways: University, Bootcamps, Apprenticeships
+            </p>
+          </div>
+
+          <div class="career">
+            <h3>Back-End Developer</h3>
+            <p>
+              Work on the behind-the-scenes functionality of websites, managing
+              servers, databases, and APIs.
+            </p>
+            <p class="skills">Skills: Node.js, Python, Java, Databases, APIs</p>
+            <p class="pathways">
+              Pathways: University, Bootcamps, Apprenticeships
+            </p>
+          </div>
+
+          <div class="career">
+            <h3>Cyber Security Analyst</h3>
+            <p>
+              Protect organisations from cyber threats and conduct security
+              audits.
+            </p>
+            <p class="skills">
+              Skills: Network security, Penetration testing, Cryptography
+            </p>
+            <p class="pathways">
+              Pathways: University, Certifications, Apprenticeships
+            </p>
+          </div>
+
+          <div class="career">
+            <h3>Cloud Engineer</h3>
+            <p>
+              Build and maintain cloud infrastructure for scalable applications.
+            </p>
+            <p class="skills">
+              Skills: AWS, Azure, Google Cloud, Kubernetes, Terraform
+            </p>
+            <p class="pathways">
+              Pathways: Certifications, Bootcamps, Work Experience
+            </p>
+          </div>
+
+          <div class="career">
+            <h3>Blockchain Developer</h3>
+            <p>Develop decentralized applications (DApps) and smart contracts.</p>
+            <p class="skills">
+              Skills: Solidity, Ethereum, Smart Contracts, Cryptography
+            </p>
+            <p class="pathways">
+              Pathways: Self-study, Certifications, Online Courses
+            </p>
+          </div>
+
+          <div class="career">
+            <h3>Embedded Systems Engineer</h3>
+            <p>
+              Develop software for hardware devices like IoT and microcontrollers.
+            </p>
+            <p class="skills">Skills: C, C++, Microcontrollers, Real-time OS</p>
+            <p class="pathways">
+              Pathways: University, Certifications, Work Experience
+            </p>
+          </div>
+
+          <div class="career">
+            <h3>Game Developer</h3>
+            <p>Create interactive video games for various platforms.</p>
+            <p class="skills">Skills: Unity, Unreal Engine, C#, Game Physics</p>
+            <p class="pathways">
+              Pathways: University, Online Courses, Game Jams
+            </p>
+          </div>
+
+          <div class="career">
+            <h3>UI/UX Designer</h3>
+            <p>Design intuitive user interfaces and user experiences.</p>
+            <p class="skills">
+              Skills: Figma, Adobe XD, User Research, Wireframing
+            </p>
+            <p class="pathways">
+              Pathways: Bootcamps, Certifications, Online Courses
+            </p>
+          </div>
+
+          <div class="career">
+            <h3>Product Manager</h3>
+            <p>Oversee product development and ensure market fit.</p>
+            <p class="skills">
+              Skills: Agile, Market Research, Roadmaps, Business Strategy
+            </p>
+            <p class="pathways">Pathways: MBA, Work Experience, Certifications</p>
+          </div>
+        </div>
+
+        <h2 id="resources">Tech Resources</h2>
+        <div class="resource-cards">
+          <div class="resource-card">
+            <a href="https://www.futurelearn.com/partners/accenture-uk">Accenture</a> - Free
+            courses on tech topics
+          </div>
+          <div class="resource-card">
+            <a href="https://www.theforage.com">Forage</a> - Virtual work
+            experience programs
+          </div>
+          <div class="resource-card">
+            <a href="https://www.w3schools.com">W3Schools</a> - Web development tutorials
+          </div>
+          <div class="resource-card">
+            <a href="https://www.freecodecamp.org">FreeCodeCamp</a> - Free
+            coding lessons
+          </div>
+          <div class="resource-card">
+            <a href="https://cs50.harvard.edu">Harvard CS50</a> - Intro to
+            Computer Science
+          </div>
+          <div class="resource-card">
+            <a href="https://theodinproject.com">The Odin Project</a> - Full-stack development
+          </div>
+          <div class="resource-card">
+            <a href="https://developer.mozilla.org">MDN Web Docs</a> - HTML,
+            CSS, JavaScript
+          </div>
+          <div class="resource-card">
+            <a href="https://frontendmentor.io">Frontend Mentor</a> - Front-end
+            challenges
+          </div>
+          <div class="resource-card">
+            <a href="https://tryhackme.com">TryHackMe</a> - Cyber Security
+            training
+          </div>
+          <div class="resource-card">
+            <a href="https://kaggle.com">Kaggle</a> - Data Science & ML practice
+          </div>
+          <div class="resource-card">
+            <a href="https://aws.amazon.com/free">AWS Free Tier</a> - Cloud
+            computing
+          </div>
+          <div class="resource-card">
+            <a href="https://learn.unity.com">Unity Learn</a> - Game development
+          </div>
+          <div class="resource-card">
+            <a href="https://indiehackers.com">Indie Hackers</a> - Tech
+            entrepreneurship
+          </div>
+          <div class="resource-card">
+            <a href="https://figma.com">Figma</a> - UI/UX design tool
+          </div>
+          <div class="resource-card">
+            <a href="https://roadmap.sh">Roadmap.sh</a> - Tech career roadmaps
+          </div>
+          <div class="resource-card">
+            <a href="https://coursera.org">Coursera</a> - Online courses from
+            top universities
+          </div>
+          <div class="resource-card">
+            <a href="https://edx.org">edX</a> - Free & paid courses on tech
+            topics
+          </div>
+          <div class="resource-card">
+            <a href="https://codecademy.com">Codecademy</a> - Interactive coding
+            tutorials
+          </div>
+        </div>
+      </section>
+    </main>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+      integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      function scrollToResources() {
+        document
+          .getElementById("resources")
+          .scrollIntoView({ behavior: "smooth" });
+      }
+    </script>
+    <script src="/js/index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hub | Next Gen Careers Tech</title>
+    <link rel="stylesheet" href="/styles/index.css" />
+    <link rel="stylesheet" href="/styles/hub.css" />
+  </head>
+  <body>
+    <!-- Hero Section -->
+    <section
+      class="flex-center hero gap-10 px-10 py-10 lg-flex-row flex-col mt-2"
+    >
+      <div class="flex flex-col space-y-2">
+        <h1 id="hero-text">Explore Your Career Pathways</h1>
+        <p class="text-lg text-gray">
+          Struggling with what to do after school but interested in
+          technology?<br />
+          We're here to help you find the right <strong>pathway</strong>.<br />
+          Using trusted sources, we guide you towards the ideal route for your
+          future. Our aim is to connect a diverse range of emerging tech talents
+          (like YOU) with the best opportunities!
+          <strong>#TechingANewPathway</strong>
+        </p>
+      </div>
+      <img src="/images/vr.jpg" alt="Hero Image" />
+    </section>
+
+    <!-- Explore Career Pathways Section -->
+    <section id="explore-careers" class="my-10">
+      <div class="px-4">
+        <div class="explore-careers-header">
+          <div class="flex-center flex-col">
+            <h2 class="text-5xl">Explore Career Pathways</h2>
+            <p class="text-lg text-gray">
+              Discover different routes into technology careers and find the
+              path that's right for you.
+            </p>
+          </div>
+        </div>
+        <div class="explore-careers-content">
+          <div class="explore-careers-info">
+            <h3>Find Your Perfect Path</h3>
+            <p>
+              Not sure which tech career path is right for you? Our interactive
+              quiz helps you explore options based on your interests, learning
+              style, and goals.
+            </p>
+            <div class="flex-center">
+              <a href="/data/CareerQ.html#quiz-section" class="btn btn-primary">
+                Take the Career Quiz <i class="bx bx-right-arrow-alt"></i>
+              </a>
+            </div>
+          </div>
+          <div class="explore-careers-cards">
+            <div class="card">
+              <div class="card-icon">
+                <i class="bx bxs-graduation text-primary"></i>
+              </div>
+              <h4>University</h4>
+              <p>Academic degrees in computer science and related fields</p>
+              <a href="#university" class="text-primary hover-underline">
+                Learn more
+              </a>
+            </div>
+            <div class="card">
+              <div class="card-icon">
+                <i class="bx bxs-briefcase text-primary"></i>
+              </div>
+              <h4>Apprenticeships</h4>
+              <p>Earn while you learn with on-the-job training</p>
+              <a href="#apprenticeships" class="text-primary hover-underline">
+                Learn more
+              </a>
+            </div>
+            <div class="card">
+              <div class="card-icon">
+                <i class="bx bxs-book-open text-primary"></i>
+              </div>
+              <h4>Bootcamps</h4>
+              <p>Intensive, short-term training programs</p>
+              <a href="#bootcamps" class="text-primary hover-underline">
+                Learn more
+              </a>
+            </div>
+            <div class="card">
+              <div class="card-icon">
+                <i class="bx bxs-award text-primary"></i>
+              </div>
+              <h4>Entry-Level Jobs</h4>
+              <p>Start your career with beginner-friendly positions</p>
+              <a href="#entry-level" class="text-primary hover-underline">
+                Learn more
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section id="resources-section-hub">
+      <!-- Content will be dynamically loaded here -->
+    </section>
+
+    <script src="/js/index.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        fetch("/data/hub.json")
+          .then((response) => response.json())
+          .then((data) => {
+            const section = document.getElementById("resources-section-hub");
+            const university = data.university;
+            const apprenticeships = data.apprenticeships;
+            const bootcamps = data.bootcamps;
+            const entryLevel = data.entryLevel;
+
+            section.innerHTML = `
+              <div id="university">
+                <div class="grid">
+                  <div>
+                    <h2 class="title">${university.title}</h2>
+                    <p class="description">${university.description}</p>
+                    <h3 class="subtitle">Popular Degree Programs</h3>
+                    <ul class="list">
+                      ${university.popularDegreePrograms
+                        .map((program) => `<li>${program}</li>`)
+                        .join("")}
+                    </ul>
+                    <h3 class="subtitle">Is University Right for You?</h3>
+                    <p class="description">${university.isRightForYou}</p>
+                    <h3 class="subtitle">Considerations</h4>
+                    <ul class="list">
+                      ${university.considerations
+                        .map((consideration) => `<li>${consideration}</li>`)
+                        .join("")}
+                    </ul>
+                  </div>
+                  <div class="space-y-6">
+                    <div class="card">
+                      <div class="card-header">
+                        <h4 class="card-title">Key Benefits</h4>
+                      </div>
+                      <div class="card-content">
+                        <ul class="list">
+                          ${university.keyBenefits
+                            .map((benefit) => `<li>${benefit}</li>`)
+                            .join("")}
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card-header">
+                        <h4 class="card-title">Finding the Right University</h4>
+                      </div>
+                      <div class="card-content">
+                        <p class="description">When researching universities, consider these factors:</p>
+                        <ul class="list">
+                          ${university.findingRightUniversity
+                            .map((factor) => `<li>${factor}</li>`)
+                            .join("")}
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="border-t pt-8">
+                  <h3 class="title">Application Process</h3>
+                  <div class="grid">
+                    ${university.applicationProcess
+                      .map(
+                        (step) => `
+                      <div class="card">
+                        <div class="card-header">
+                          <h4 class="card-title">${step.step}</h4>
+                        </div>
+                        <div class="card-content">
+                          <p class="description">${step.description} <a href="${step.link}" target="_blank">Learn more</a></p>
+                        </div>
+                      </div>
+                    `
+                      )
+                      .join("")}
+                  </div>
+                </div>
+                <div class="border-t pt-8">
+                  <h3 class="title">Where to Find Information</h3>
+                  <div class="grid">
+                    ${university.whereToFindInformation
+                      .map(
+                        (source) => `
+                      <div class="card">
+                        <div class="card-header">
+                          <h4 class="card-title">${source.source}</h4>
+                        </div>
+                        <div class="card-content">
+                          <p class="description">${source.description} <a href="${source.link}" target="_blank">Learn more</a></p>
+                        </div>
+                      </div>
+                    `
+                      )
+                      .join("")}
+                  </div>
+                </div>
+              </div>
+
+              <div id="apprenticeships">
+                <div class="grid">
+                  <div>
+                    <h2 class="title">${apprenticeships.title}</h2>
+                    <p class="description">${apprenticeships.description}</p>
+                    <h3 class="subtitle">Types of Tech Apprenticeships</h3>
+                    <ul class="list">
+                      ${apprenticeships.types
+                        .map((type) => `<li>${type}</li>`)
+                        .join("")}
+                    </ul>
+                    <h3 class="subtitle">Is an Apprenticeship Right for You?</h3>
+                    <p class="description">${apprenticeships.isRightForYou}</p>
+                    <h3 class="subtitle">Considerations</h4>
+                    <ul class="list">
+                      ${apprenticeships.considerations
+                        .map((consideration) => `<li>${consideration}</li>`)
+                        .join("")}
+                    </ul>
+                  </div>
+                  <div class="space-y-6">
+                    <div class="card">
+                      <div class="card-header">
+                        <h4 class="card-title">Key Benefits</h4>
+                      </div>
+                      <div class="card-content">
+                        <ul class="list">
+                          ${apprenticeships.keyBenefits
+                            .map((benefit) => `<li>${benefit}</li>`)
+                            .join("")}
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card-header">
+                        <h4 class="card-title">Finding Apprenticeships</h4>
+                      </div>
+                      <div class="card-content">
+                        <p class="description">Tech apprenticeships can be found through:</p>
+                        <ul class="list">
+                          ${apprenticeships.findingApprenticeships
+                            .map((source) => `<li>${source}</li>`)
+                            .join("")}
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="border-t pt-8">
+                  <h3 class="title">Top Companies Offering Tech Apprenticeships</h3>
+                  <div class="grid">
+                    ${apprenticeships.topCompanies
+                      .map(
+                        (company) => `
+                      <div class="card">
+                        <div class="card-header">
+                          <h4 class="card-title">${company.company}</h4>
+                        </div>
+                        <div class="card-content">
+                          <p class="description">${company.description} <a href="${company.link}" target="_blank">Learn more</a></p>
+                        </div>
+                      </div>
+                    `
+                      )
+                      .join("")}
+                  </div>
+                </div>
+                <div class="border-t pt-8">
+                  <h3 class="title">Where to Find Information</h3>
+                  <div class="grid">
+                    ${apprenticeships.whereToFindInformation
+                      .map(
+                        (source) => `
+                      <div class="card">
+                        <div class="card-header">
+                          <h4 class="card-title">${source.source}</h4>
+                        </div>
+                        <div class="card-content">
+                          <p class="description">${source.description} <a href="${source.link}" target="_blank">Learn more</a></p>
+                        </div>
+                      </div>
+                    `
+                      )
+                      .join("")}
+                  </div>
+                </div>
+              </div>
+
+              <div id="entry-level">
+                <div class="grid">
+                  <div>
+                    <h2 class="title">${entryLevel.title}</h2>
+                    <p class="description">${entryLevel.description}</p>
+                    <h3 class="subtitle">Common Entry-Level Tech Roles</h3>
+                    <ul class="list">
+                      ${entryLevel.commonRoles
+                        .map((role) => `<li>${role}</li>`)
+                        .join("")}
+                    </ul>
+                    <h3 class="subtitle">Is This Path Right for You?</h3>
+                    <p class="description">${entryLevel.isRightForYou}</p>
+                    <h3 class="subtitle">Considerations</h4>
+                    <ul class="list">
+                      ${entryLevel.considerations
+                        .map((consideration) => `<li>${consideration}</li>`)
+                        .join("")}
+                    </ul>
+                  </div>
+                  <div class="space-y-6">
+                    <div class="card">
+                      <div class="card-header">
+                        <h4 class="card-title">Building Your Portfolio</h4>
+                      </div>
+                      <div class="card-content">
+                        <ul class="list">
+                          ${entryLevel.buildingPortfolio
+                            .map((item) => `<li>${item}</li>`)
+                            .join("")}
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card-header">
+                        <h4 class="card-title">Standing Out as a Self-Taught Candidate</h4>
+                      </div>
+                      <div class="card-content">
+                        <ul class="list">
+                          ${entryLevel.standingOut
+                            .map((item) => `<li>${item}</li>`)
+                            .join("")}
+                        </ul>
+                        <div class="text-center">
+                          <button class="btn btn-primary">
+                            <a href="https://s2sacademy.com/" target="_blank" class="text-white">
+                              S2S Academy (by Accenture) - Plan your career
+                              </a>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="border-t pt-8">
+                  <h3 class="title">Self-Learning Resources</h3>
+                  <div class="grid">
+                    <div class="card">
+                      <div class="card-header">
+                        <h4 class="card-title">Free Learning Platforms</h4>
+                      </div>
+                      <div class="card-content">
+                        <ul class="list">
+                          ${entryLevel.selfLearningResources.freePlatforms
+                            .map(
+                              (platform) =>
+                                `<li><a href="${platform.link}" target="_blank">${platform.name}</a></li>`
+                            )
+                            .join("")}
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card-header">
+                        <h4 class="card-title">Paid Courses</h4>
+                      </div>
+                      <div class="card-content">
+                        <ul class="list">
+                          ${entryLevel.selfLearningResources.paidCourses
+                            .map(
+                              (course) =>
+                                `<li><a href="${course.link}" target="_blank">${course.name}</a></li>`
+                            )
+                            .join("")}
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card-header">
+                        <h4 class="card-title">Practice Platforms</h4>
+                      </div>
+                      <div class="card-content">
+                        <ul class="list">
+                          ${entryLevel.selfLearningResources.practicePlatforms
+                            .map(
+                              (platform) =>
+                                `<li><a href="${platform.link}" target="_blank">${platform.name}</a></li>`
+                            )
+                            .join("")}
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="border-t pt-8">
+                  <h3 class="title">Where to Find Information</h3>
+                  <div class="grid">
+                    ${entryLevel.whereToFindInformation
+                      .map(
+                        (source) => `
+                      <div class="card">
+                        <div class="card-header">
+                          <h4 class="card-title">${source.source}</h4>
+                        </div>
+                        <div class="card-content">
+                          <p class="description">${source.description} <a href="${source.link}" target="_blank">Learn more</a></p>
+                        </div>
+                      </div>
+                    `
+                      )
+                      .join("")}
+                  </div>
+                </div>
+              </div>
+
+              <div id="bootcamps">
+                <div class="grid">  
+                  <div>
+                    <h2 class="title">${bootcamps.title}</h2>
+                    <p class="description">${bootcamps.description}</p>
+                    <h3 class="subtitle">Common Bootcamp Specializations</h3>
+                    <ul class="list">
+                      ${bootcamps.specialisations
+                        .map((specialisation) => `<li>${specialisation}</li>`)
+                        .join("")}
+                    </ul>
+                    <h3 class="subtitle">Is a Bootcamp Right for You?</h3>
+                    <p class="description">${bootcamps.isRightForYou}</p>
+                    <h3 class="subtitle">Considerations</h4>
+                    <ul class="list">
+                      ${bootcamps.considerations
+                        .map((consideration) => `<li>${consideration}</li>`)
+                        .join("")}
+                    </ul>
+                  </div>  
+                  <div class="space-y-6">
+                    <div class="card">
+                      <div class="card-header">
+                        <h4 class="card-title">Key Benefits</h4>
+                      </div>
+                      <div class="card-content">
+                        <ul class="list">
+                          ${bootcamps.keyBenefits
+                            .map((benefit) => `<li>${benefit}</li>`)
+                            .join("")}
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card-header">
+                        <h4 class="card-title">Choosing a Bootcamp</h4>
+                      </div>
+                      <div class="card-content">
+                        <p class="description">When selecting a bootcamp, consider:</p>
+                        <ul class="list">
+                          ${bootcamps.choosingBootcamp
+                            .map((factor) => `<li>${factor}</li>`)
+                            .join("")}
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="border-t pt-8">
+                  <h3 class="title">Preparing for a Bootcamp</h3>
+                  <div class="grid">
+                    ${bootcamps.preparingBootcamp
+                      .map(
+                        (step) => `
+                      <div class="card">
+                        <div class="card-header">
+                          <h4 class="card-title">${step.step}</h4>
+                        </div>
+                        <div class="card-content">
+                          <p class="description">${step.description} ${
+                          step.link
+                            ? `<a href="${step.link}" target="_blank">Learn more</a>`
+                            : ""
+                        }</p>
+                        </div>
+                      </div>
+                    `
+                      )
+                      .join("")}
+                  </div>
+                </div>
+                <div class="border-t pt-8">
+                  <h3 class="title">Where to Find Information</h3>
+                  <div class="grid">
+                    ${bootcamps.whereToFindInformation
+                      .map(
+                        (source) => `
+                      <div class="card">
+                        <div class="card-header">
+                          <h4 class="card-title">${source.source}</h4>
+                        </div>
+                        <div class="card-content">
+                          <p class="description">${source.description} <a href="${source.link}" target="_blank">Learn more</a></p>
+                        </div>
+                      </div>
+                    `
+                      )
+                      .join("")}
+                  </div>
+                </div>
+              </div>
+
+              
+            `;
+          })
+          .catch((error) => console.error("Error fetching data:", error));
+      });
+    </script>
+  </body>
+</html>

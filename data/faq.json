@@ -1,0 +1,18 @@
+[
+    {
+        "question": "Do I need a degree to work in technology?",
+        "answer": "No, a degree is not always necessary to work in technology. While some roles may prefer or require degrees, many tech companies value skills and experience over formal education. Alternative pathways include bootcamps, self-learning, certifications, and apprenticeships. What matters most is demonstrating your skills through projects, contributions, and continuous learning."
+    },
+    {
+        "question": "How do I find a mentor in the tech industry?",
+        "answer": "Find a tech mentor by attending industry meetups, conferences, and hackathons where you can connect with experienced professionals. Join online communities like Stack Overflow, GitHub, or specialised Slack groups. Formal mentorship programmes through organisations like Codebar or Women Who Code are excellent options. When approaching potential mentors, be specific about what you hope to learn and respectful of their time."
+    },
+    {
+        "question": "I'm not good at math. Can I still work in tech?",
+        "answer": "While some tech fields like data science or machine learning are math-intensive, many areas of technology don't require advanced mathematics. Web development, UX/UI design, technical writing, project management, and many other tech roles rely more on creativity, problem-solving, and communication skills than mathematical ability."
+    },
+    {
+        "question": "Are coding bootcamps worth the investment?",
+        "answer": "Coding bootcamps can be worth the investment for many people, especially those looking to transition into tech quickly. They offer intensive, focused training on practical skills that employers value. However, the value depends on factors like the bootcamp's reputation, curriculum, job placement services, and your learning style. Research thoroughly, read reviews, and speak with alumni before committing."
+    }
+]

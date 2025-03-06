@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <section id="quiz-section">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=5.0">
+    <title>Tech Career Quiz</title>
+    <style>
+        body {
+            font-family: Copperplate,sans-serif;
+            max-width: 790px;
+            margin: auto;
+            padding: 20px;
+            text-align: center;
+            border-style: groove double;
+ 
+        }
+        .question {
+        	font-family: Arial,sans-serif;
+            margin-bottom: 15px;
+            border: 2px solid #a100ff;
+            border-radius: 100px;
+            padding: 20px
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px;
+            cursor: pointer;
+            border-left-style: solid grey
+        }
+    </style>
+</head>
+<body>
+    <h1>Tech Career Quiz</h1>
+    <form id="quizForm">
+        <div class="question">
+            <p>Do you enjoy coding?</p>
+            <label><input type="radio" name="q1" value="Software Engineer,Front End Developer/Web Designer,Back End Developer"> Yes! That's why I want to get into tech</label><br>
+            <label><input type="radio" name="q1" value="Cyber Security Analyst,Game Developer"> Sure, I find it fun</label><br>
+            <label><input type="radio" name="q1" value="UI/UX Designer,Product Manager,Cloud Engineer"> Not particularly my strength</label><br>
+        </div>
+        <div class="question">
+            <p>How would your friends describe you?</p>
+            <label><input type="radio" name="q2" value="Game Developer,Front End Developer/Web Designer,UI/UX Designer" > Creative</label><br>
+            <label><input type="radio" name="q2" value="Back End Developer,Software Engineer"> Reserved </label><br>
+            <label><input type="radio" name="q2" value="Product Manager"> A Leader</label><br>
+            <label><input type="radio" name="q2" value="Cloud Engineer,Cyber Security Analyst" > Supportive</label>
+        </div>
+        <div class="question">
+            <p>What kind of working environment do you prefer?</p>
+            <label><input type="radio" name="q3" value="Cloud Engineer,UI/UX Designer"> With other people</label><br>
+            <label><input type="radio" name="q3" value="Back End Developer,Software Engineer"> By myself for important things</label><br>
+            <label><input type="radio" name="q3" value="Product Manager"> I don't mind as long as I am in charge!</label><br>
+            <label><input type="radio" name="q3" value="Game Developer,Front End Developer/Web Designer"> Only with my friends</label>
+        </div>
+        <div class="question">
+            <p>If you were a painting, what would you be?</p>
+            <label><input type="radio" name="q4" value="Product Manager"> Mona Lisa</label><br>
+            <label><input type="radio" name="q4" value="Cloud Engineer,UI/UX Designer"> A sunrise</label><br>
+            <label><input type="radio" name="q4" value="Cyber Security Analyst,Back End Developer"> An abstract symbolic piece</label><br>
+            <label><input type="radio" name="q4" value="Game Developer,Front End Developer/Web Designer"> A galaxy expanding</label>
+        </div>
+        <div class="question">
+            <p>How difficult is it for you to juggle multiple ideas?</p>
+            <label><input type="radio" name="q5" value="Back End Developer,Software Engineer,Cyber Security Analyst" > Difficult, I like one clear task</label><br>
+            <label><input type="radio" name="q5" value="UI/UX Designer,Cloud Engineer,Product Manager"> The more things to do the better</label>
+        </div>
+        <div class="question">
+            <p>In your friendship group, what member are you??</p>
+            <label><input type="radio" name="q6" value="Product Manager"> The leader of the pack</label><br>
+            <label><input type="radio" name="q6" value="Game Developer,Front End Developer/Web Designer,UI/UX Designer"> Glued to your closest friend</label><br>
+            <label><input type="radio" name="q6" value="Cloud Engineer,Cyber Security Analyst"> Just happy to be there</label>
+        </div>
+        <div class="question">
+            <p>Does the possibility of AI excite you?</p>
+            <label><input type="radio" name="q7" value="Software Engineer,Game Developer,Cloud Engineer"> Yes, I use it all the time</label><br>
+            <label><input type="radio" name="q7" value="Back End Developer"> I have actually created my own AI</label><br>
+            <label><input type="radio" name="q7" value="Product Manager,Cyber Security Analyst"> Yes, but I'm scared about the social and moral impacts</label><br>
+            <label><input type="radio" name="q7" value="Front End Developer/Web Designer,UI/UX Designer"> I want to become AI LOL</label>
+        </div>
+        <button type="button" onclick="calculateResult()">Tell me my Career!</button>
+    </form>
+    <h2 id="result"></h2>
+    <script>
+        function calculateResult() {
+            const answers = document.querySelectorAll('input[type="radio"]:checked');
+            if (answers.length == 0) {
+                document.getElementById('result').innerText = "Please select an answer.";
+                return;
+            }
+
+            let careerCount = {
+                "Software Engineer": 0,
+                "Game Developer": 0,
+                "Cloud Engineer": 0,
+                "Back End Developer": 0,
+                "Product Manager": 0,
+                "Cyber Security Analyst": 0,
+                "Front End Developer/Web Designer": 0,
+                "UI/UX Designer": 0
+            };
+
+            // Loop through each selected answer
+            answers.forEach(answer => {
+                let careers = answer.value.split(","); // Split multiple careers by commas
+                careers.forEach(career => {
+                    if (careerCount[career] !== undefined) {
+                        careerCount[career]++; // Increase count if career exists
+                    }
+                });
+            });
+
+            // Find the career with the highest count
+            let highestCareer = Object.keys(careerCount).reduce((a, b) => careerCount[a] > careerCount[b] ? a : b);
+
+            document.getElementById('result').innerText = `Your suggested career is: ${highestCareer}`;
+        }
+    </script>
+</body>
+</html>

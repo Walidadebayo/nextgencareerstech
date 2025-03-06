@@ -1,0 +1,120 @@
+<header>
+  <nav>
+    <div class="flex-between gap-3">
+      <div class="brand">
+        <a href="/">
+          <img
+            src="/images/logo-text-light.png"
+            alt="NextGenCareersTech Logo"
+            id="logo-text"
+          />
+          <img
+            src="/images/logo.png"
+            alt="NextGenCareersTech Logo"
+            id="logo"
+            class="d-none"
+          />
+        </a>
+      </div>
+      <!-- Desktop Nav -->
+      <div class="nav-links" id="desktop-nav">
+        <ul class="flex-between">
+          <li>
+            <a href="/">
+              <i class="bx bx-home"></i>
+              <span>Home</span>
+            </a>
+          </li>
+          <li>
+            <a href="/pages/hub.html">
+              <i class="bx bx-network-chart"></i>
+              <span>Hub</span>
+            </a>
+          </li>
+          <li>
+            <a href="/pages/resources.html"
+              ><i class="bx bx-book-bookmark"></i><span>Resources</span></a
+            >
+          </li>
+          <li>
+            <a href="/pages/contact.html"
+              ><i class="bx bx-mail-send"></i>Contact</a
+            >
+          </li>
+          <li>
+            <a href="/pages/whoweare.html"
+              ><i class="bx bx-group"></i><span>Who we are</span></a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="flex-between gap-2">
+        <button class="btn-icon d-none" id="menu-toggle">
+          <i class="bx bx-menu text-2xl"></i>
+        </button>
+        <button type="button" class="btn-icon">
+          <i class="bx bx-sun text-xl"></i>
+        </button>
+        <div id="search-bar">
+          <form class="search-form" method="get" action="/pages/search.html">
+            <div class="flex items-center relative">
+              <input
+                type="search"
+                id="search-input"
+                class="pr-10"
+                name="q"
+                autocomplete="off"
+                placeholder="Search"
+                title="Search careers (Software Engineering)"
+                x-webkit-speech
+              />
+              <button
+                type="submit"
+                title="Search"
+                class="btn-icon"
+              >
+                <i class="bx bx-search text-primary text-2xl"></i>
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <button class="btn-icon" id="search-toggle">
+          <i class="bx bx-search text-xl"></i>
+        </button>
+      </div>
+    </div>
+    <!--  Mobile Nav -->
+    <div class="nav-links my-3" id="mobile-nav">
+      <ul class="flex flex flex-col">
+        <li>
+          <a href="/">
+            <i class="bx bx-home"></i>
+            <span>Home</span>
+          </a>
+        </li>
+        <li>
+          <a href="/pages/hub.html">
+            <i class="bx bx-network-chart"></i>
+            <span>Hub</span>
+          </a>
+        </li>
+        <li>
+          <a href="/pages/resources.html"
+            ><i class="bx bx-book-bookmark"></i><span>Resources</span></a
+          >
+        </li>
+        <li>
+          <a href="/pages/contact.html"
+            ><i class="bx bx-mail-send"></i>Contact</a
+          >
+        </li>
+        <li>
+          <a href="/who-we-are"
+            ><i class="bx bx-group"></i><span>Who we are</span></a
+          >
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>

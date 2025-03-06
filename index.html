@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Next Gen Careers Tech</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <!-- React Video Audio Player -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/react-video-audio-player@1.3.2/dist/video-audio-player.css"
+    />
+    <link rel="stylesheet" href="/styles/index.css" />
+  </head>
+
+  <body>
+    <div class="preloader is-active">
+      <div class="preloader__wrap">
+        <img class="spinner" src="/images/logo.png" />
+      </div>
+    </div>
+
+    <main class="min-h-screen flex flex-col">
+      <!-- Hero Section -->
+      <section
+        class="flex-between hero gap-10 px-10 py-10 lg-flex-row flex-col mt-2"
+      >
+        <div class="flex flex-col space-y-2" data-aos="fade-right">
+          <h1 id="hero-text" class="">
+            Launch Your Tech Career Journey
+            <!-- Teching a new pathway -->
+          </h1>
+          <p class="text-md text-gray">
+            Struggling with what to do after school but interested in
+            technology?<br />
+            We're here to help you find the right <strong>pathway</strong>.
+            <br />Using trusted sources, we guide you towards the ideal route
+            for your future. Our aim is to connect a diverse range of emerging
+            tech talents (like YOU) with the best opportunities!
+            <strong>#TechingANewPathway</strong>
+          </p>
+          <div class="flex gap-2 flex-col xs-flex-row">
+            <a href="/pages/hub.html" class="btn btn-primary"
+              >Explore Hub <i class="bx bx-right-arrow-alt"></i>
+            </a>
+            <a href="/pages/contact.html" class="btn btn-secondary"
+              >Contact Us</a
+            >
+          </div>
+        </div>
+        <div class="swiper hero-swiper" data-aos="fade-left">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <!-- <video controls src="/videos/NextGenCareersTech.mp4">
+                Your browser does not support the video tag.
+              </video> -->
+              <div id="hero-video"></div>
+            </div>
+            <div class="swiper-slide">
+              <img src="/images/resources.jpeg" alt="Hero Image" />
+            </div>
+            <div class="swiper-slide">
+              <img src="/images/code.jpeg" alt="Hero Image" />
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next hero-next">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 38 40"
+              fill="none"
+            >
+              <title>Accenture</title>
+              <path
+                fill="#a100ff"
+                d="M0 28.75L22.07 20.54L0 11.92V0.5L37.8 15.72V25.19L0 40.5V28.75Z"
+              />
+            </svg>
+          </div>
+          <div class="swiper-button-prev hero-prev">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 38 40"
+              fill="none"
+              style="transform: scaleX(-1)"
+            >
+              <title>Accenture</title>
+              <path
+                fill="#a100ff"
+                d="M0 28.75L22.07 20.54L0 11.92V0.5L37.8 15.72V25.19L0 40.5V28.75Z"
+              />
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <!-- Explore Career Pathways Section -->
+      <section id="explore-careers" class="my-10" data-aos="fade-up">
+        <div class="px-4">
+          <div class="explore-careers-header">
+            <div class="flex-center flex-col">
+              <h2 class="text-5xl">Discover Tech Pathways</h2>
+              <p class="text-lg text-gray">
+                Explore diverse career paths in technology and find the one that
+                matches your interests and skills.
+              </p>
+            </div>
+          </div>
+          <!-- <div class="explore-careers-info">
+              <h3>Find Your Perfect Path</h3>
+              <p>
+                Not sure which tech career path is right for you? Our
+                interactive quiz helps you explore options based on your
+                interests, learning style, and goals.
+              </p>
+              <div class="flex-center">
+                <a href="#" class="btn btn-primary">
+                  Take the Career Quiz <i class="bx bx-right-arrow-alt"></i>
+                </a>
+              </div>
+            </div> -->
+          <div class="explore-careers-cards2">
+            <div class="card">
+              <div class="card-icon">
+                <i class="bx bx-code text-primary"></i>
+              </div>
+              <h4>Software Development</h4>
+              <p>
+                Build applications, websites, and software systems that power
+                the digital world.
+              </p>
+            </div>
+            <div class="card">
+              <div class="card-icon">
+                <i class="bx bx-shield-quarter text-primary"></i>
+              </div>
+              <h4>Cybersecurity</h4>
+              <p>
+                Protect systems, networks, and data from cyber threats and
+                attacks.
+              </p>
+            </div>
+            <div class="card">
+              <div class="card-icon">
+                <i class="bx bx-scatter-chart text-primary"></i>
+              </div>
+              <h4>Data Science</h4>
+              <p>
+                Analyze and interpret complex data to drive informed business
+                decisions.
+              </p>
+            </div>
+          </div>
+          <div class="text-center">
+            <a href="/pages/resources.html" class="btn btn-primary">
+              View All Pathways <i class="bx bx-right-arrow-alt"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Success Stories -->
+      <section id="success-stories" class="success-stories my-10">
+        <div class="px-4">
+          <div class="success-stories-header">
+            <div class="header-content">
+              <h2 class="text-5xl">Success Stories</h2>
+              <p>
+                Read about young people who have successfully launched their
+                careers in technology.
+              </p>
+              <p>
+                The UCAS data reveals a significant shift toward
+                technology-based degrees, with a 400% increase in acceptances to
+                AI courses over the past decade. Computer science and
+                engineering have also seen impressive growth, with computer
+                science acceptances rising by nearly 50% and engineering up by
+                21%. This surge is driven by the growing demand for tech
+                professionals, particularly in fields like AI and machine
+                learning, which are central to addressing key ethical challenges
+                in various sectors.
+              </p>
+            </div>
+          </div>
+          <div class="success-stories-content">
+            <div class="swiper success-swiper">
+              <div class="swiper-wrapper" id="success-data"></div>
+              <div class="swiper-button-next success-next">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 38 40"
+                  fill="none"
+                >
+                  <title>Accenture</title>
+                  <path
+                    fill="#a100ff"
+                    d="M0 28.75L22.07 20.54L0 11.92V0.5L37.8 15.72V25.19L0 40.5V28.75Z"
+                  />
+                </svg>
+              </div>
+              <div class="swiper-button-prev success-prev">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 38 40"
+                  fill="none"
+                  style="transform: scaleX(-1)"
+                >
+                  <title>Accenture</title>
+                  <path
+                    fill="#a100ff"
+                    d="M0 28.75L22.07 20.54L0 11.92V0.5L37.8 15.72V25.19L0 40.5V28.75Z"
+                  />
+                </svg>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Frequently Asked Questions -->
+      <section class="faq-section my-10">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-container">
+          <!--FAQ question1-->
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>What is NextGenCareersTech?</span>
+              <i class="bx bx-x"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                NextGenCareersTech is a platform dedicated to helping
+                individuals build successful careers in technology or something
+                like that .
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Index -->
+    <script src="/js/index.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+      integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/react-video-audio-player@1.3.2/dist/index.umd.min.js"></script>
+<!-- 
+    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+    <script>
+      function addDarkmodeWidget() {
+        new Darkmode().showWidget();
+      }
+      window.addEventListener("load", addDarkmodeWidget);
+    </script> -->
+    <script>
+      // Initialise Swiper
+      var swiper = new Swiper(".hero-swiper", {
+        pagination: {
+          el: ".swiper-pagination",
+          dynamicBullets: true,
+        },
+        navigation: {
+          nextEl: ".hero-next",
+          prevEl: ".hero-prev",
+        },
+      });
+
+      var swiper = new Swiper(".success-swiper", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        pagination: {
+          el: ".swiper-pagination",
+          type: "fraction",
+        },
+        navigation: {
+          nextEl: ".success-next",
+          prevEl: ".success-prev",
+        },
+      });
+
+      if (typeof Swiper !== "undefined") {
+        // Initialise React Video Audio Player
+        const video = document.getElementById("hero-video");
+        const player = VideoPlayer({
+          src: "/videos/NextGenCareersTech.mp4",
+          accentColor: "#a100ff",
+          style: {
+            borderRadius: "5px",
+          },
+        });
+        video.appendChild(player);
+
+        // Fetch success stories data
+        fetch("/data/success-stories.json")
+          .then((response) => response.json())
+          .then((data) => {
+            const successData = document.getElementById("success-data");
+            data.forEach((story) => {
+              const storyElement = document.createElement("div");
+              storyElement.classList.add("swiper-slide");
+              storyElement.innerHTML = `
+                <div class="swiper-slide">
+                  <div class="story-card">
+                    <div class="story-header">
+                      <img
+                        src="https://placehold.co/600x400"
+                        alt="${story.name} Image"
+                        class="story-image"
+                      />
+                      <div>
+                        <h3>${story.name}</h3>
+                        <p>${story.story}</p>
+                      </div>
+                    </div>
+                    <div class="story-content">
+                      <p class="text-gray text-xl">
+                        "${story.details}"
+                      </p>
+                      <a href="${story.read_more}" class="text-primary hover-underline">
+                        Read more
+                        <i class="bx bx-link-external"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              `;
+              successData.appendChild(storyElement);
+            });
+            swiper.update();
+          })
+          .catch((error) => console.error("Error fetching data:", error));
+      } else {
+        console.error("Swiper has not loaded.");
+      }
+
+      // Fetch FAQ data
+      fetch("/data/faq.json")
+        .then((response) => response.json())
+        .then((data) => {
+          const faqContainer = document.querySelector(".faq-container");
+          data.forEach((faq) => {
+            const faqItem = document.createElement("div");
+            faqItem.classList.add("faq-item");
+            faqItem.innerHTML = `
+            <div class="faq-question">
+              <span>${faq.question}</span>
+              <i class="bx bx-x"></i>
+            </div>
+            <div class="faq-answer">
+              <p>${faq.answer}</p>
+            </div>
+          `;
+            faqContainer.appendChild(faqItem);
+          });
+          const faqItems = document.querySelectorAll(".faq-item");
+
+          faqItems.forEach((item) => {
+            const question = item.querySelector(".faq-question");
+            const answer = item.querySelector(".faq-answer");
+            const icon = item.querySelector(".faq-question i");
+
+            question.addEventListener("click", () => {
+              item.classList.toggle("active");
+
+              if (item.classList.contains("active")) {
+                answer.style.maxHeight = answer.scrollHeight + "px";
+                icon.classList.replace("bx-x", "bx-chevron-left");
+              } else {
+                answer.style.maxHeight = "0";
+                icon.classList.replace("bx-chevron-left", "bx-x");
+              }
+            });
+          });
+        });
+    </script>
+  </body>
+</html>

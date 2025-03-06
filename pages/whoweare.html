@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Who We Are</title>
+
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles/index.css" />
+    <link rel="stylesheet" href="/styles/whoweare.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/react-video-audio-player@1.3.2/dist/video-audio-player.css"
+    />
+  </head>
+
+  <body>
+    <main>
+      <div class="TheTeam-container my-7">
+        <h1>Meet The Team</h1>
+        <div class="Slides"></div>
+
+        <!-- Swiper -->
+
+        <div #swiperRef="" class="swiper-container mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="flex-center flex-col text-center">
+                <img
+                  src="/images/teams/Ayo.jpeg"
+                  alt="Ayomide"
+                  class="slide-image"
+                />
+                <h3>About Ayomide Phillips</h3>
+                <p>
+                  Ayomide has a background in client solutions from retail to
+                  small technology and finance. She strives for a positive,
+                  social, and environmental change through emerging
+                  technologies.
+                </p>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="slide-content">
+                <img
+                  src="/images/teams/Daniel.png"
+                  alt="Daniel"
+                  class="slide-image"
+                />
+                <h3>About Daniel Homer</h3>
+                <p>
+                  Daniel has a background as a technical analyst mainly working
+                  on large government contracts. However, his real passion is
+                  within the ever expanding field of generative AI.
+                </p>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="slide-content">
+                <img
+                  src="/images/teams/walid.png"
+                  alt="Walid"
+                  class="slide-image"
+                />
+                <h3>About Walid Adebayo</h3>
+                <p>
+                  Walid has a background in full-stack web development. He is
+                  passionate about using technology to solve real-world
+                  problems.
+                </p>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="slide-content">
+                <img
+                  src="images/teams/Haris.jpg"
+                  alt="Haris"
+                  class="slide-image"
+                />
+                <h3>About Haris Shoaib</h3>
+                <p>
+                  Haris has a background in the medical field, with academic
+                  experience in dental science. Haris is now focused on
+                  transitioning into the tech industry, with a strong interest
+                  in learning more about AI and its applications.
+                </p>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="slide-content">
+                <img
+                  src="/images/teams/iqbaal.JPG"
+                  alt="Iqbaal"
+                  class="slide-image"
+                />
+                <h3>About Iqbaal El-hajoui</h3>
+                <p>
+                  Iqbaal has a background in computing, software development,
+                  and IT security. With experience in IT support and social
+                  media marketing, he enjoys problem-solving.
+                </p>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="slide-content">
+                <img
+                  src="https://via.placeholder.com/150"
+                  alt="Slide 6"
+                  class="slide-image"
+                />
+                <h3>Slide 6 Title</h3>
+                <p>Slide 6 description goes here.</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-next">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 34 40"
+              fill="none"
+            >
+              <title>Accenture</title>
+              <path
+                fill="#a100ff"
+                d="M0 28.75L22.07 20.54L0 11.92V0.5L37.8 15.72V25.19L0 40.5V28.75Z"
+              />
+            </svg>
+          </div>
+          <div class="swiper-button-prev">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 38 40"
+              fill="none"
+              style="transform: scaleX(-1)"
+            >
+              <title>Accenture</title>
+              <path
+                fill="#a100ff"
+                d="M0 28.75L22.07 20.54L0 11.92V0.5L37.8 15.72V25.19L0 40.5V28.75Z"
+              />
+            </svg>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+
+      <!--Mission statement ?-->
+      <div class="text-center">
+        <h2 class="text-5xl">Our Mission</h2>
+      </div>
+
+      <div class="mission-statment">
+        <p>bla bla bla</p>
+      </div>
+    </main>
+
+    <!-- AOS Library for Animation -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+      integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialise Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        pagination: {
+          el: ".swiper-pagination",
+          type: "fraction",
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+  </body>
+  <script src="/js/index.js"></script>
+</html>

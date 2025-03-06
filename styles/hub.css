@@ -1,0 +1,91 @@
+#resources-section-hub {
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 1200px;
+}
+
+#resources-section-hub .grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+}
+
+@media (max-width: 445px) {
+  #resources-section-hub .grid {
+    grid-template-columns: 1fr; 
+  }
+}
+
+#resources-section-hub > * {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  border: 1px solid #e5e7eb;
+}
+
+#resources-section-hub .title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+#resources-section-hub .description {
+  color: #6b7280;
+  margin-bottom: 1rem;
+}
+
+#resources-section-hub .subtitle {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+#resources-section-hub .list {
+  list-style-type: disc;
+  padding-left: 1.25rem;
+  color: #6b7280;
+  margin-bottom: 1rem;
+}
+
+#resources-section-hub .list a {
+  color: #a100ff;
+  text-decoration: none;
+}
+
+#resources-section-hub .list a:hover {
+  text-decoration: underline;
+}
+
+#resources-section-hub .card {
+  border: 1px solid #a100ff;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  background-color: #fff;
+}
+
+#resources-section-hub .card-header {
+  margin-bottom: 1rem;
+}
+
+#resources-section-hub .card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+#resources-section-hub .card-content {
+  color: #6b7280;
+}
+
+#resources-section-hub .card-content p a {
+  color: #a100ff;
+}
+/* #resources-section-hub .card-content a:hover {
+  text-decoration: underline;
+}  */
+
+.border-t {
+  border-top: 1px solid #e5e7eb;
+  padding-top: 2rem;
+}

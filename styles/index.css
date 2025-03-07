@@ -22,6 +22,7 @@ body {
 body::-webkit-scrollbar {
   width: 4px;
 }
+
 body::-webkit-scrollbar-thumb {
   background-color: #a100ff;
   border-radius: 30px;
@@ -1237,6 +1238,8 @@ header #search-bar.show {
   width: 100%;
   height: 100%;
 }
+
+
 
 .swiper-slide {
   text-align: center;

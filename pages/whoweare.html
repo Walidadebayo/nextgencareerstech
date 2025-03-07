@@ -28,14 +28,14 @@
       </div>
     </div>
     <main>
-      <div class="TheTeam-container my-7 text-center">
+      <div class="TheTeam-container my-7 mx-10 text-center">
         <h1>Meet The Team</h1>
         <div class="Slides"></div>
 
         <!-- Swiper -->
 
-        <div class="px-10">
-          <div class="swiper-container mySwiper">
+        <div class="team-container">
+          <div class="swiper-container swiper relative mySwiper">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <div class="flex-center flex-col text-center">
@@ -51,12 +51,12 @@
                     social, and environmental change through emerging
                     technologies.
                   </p>
-                  <h2>Area of Expertise</h2>
+                  <h4>Area of Expertise</h4>
                   <ul>
                     <li>Client Solutions</li>
                     <li>Moral uses of Technologies</li>
                   </ul>
-                  <h2>Notable Achievements</h2>
+                  <h4>Notable Achievements</h4>
                   <ul>
                     <li>Led multiple successful client projects</li>
                   </ul>
@@ -75,12 +75,12 @@
                     working on large government contracts. However, his real
                     passion is within the ever expanding field of generative AI.
                   </p>
-                  <h2>Area of Expertise</h2>
+                  <h4>Area of Expertise</h4>
                   <ul>
                     <li>CMDB Management</li>
                     <li>IaaS Platforms</li>
                   </ul>
-                  <h2>Notable Achievements</h2>
+                  <h4>Notable Achievements</h4>
                   <ul>
                     <li>Worked on major government contracts</li>
                   </ul>
@@ -101,13 +101,13 @@
                     passionate about using technology to solve real-world
                     problems.
                   </p>
-                  <h2>Area of Expertise</h2>
+                  <h4>Area of Expertise</h4>
                   <ul>
                     <li>Web Development</li>
                     <li>Project-Based Learning</li>
                     <li>Problem Solving</li>
                   </ul>
-                  <h2>Notable Achievements</h2>
+                  <h4>Notable Achievements</h4>
                   <ul>
                     <li>
                       Developed a multimedia processing tool offering AI-powered
@@ -130,12 +130,12 @@
                     transitioning into the tech industry, with a strong interest
                     in learning more about AI and its applications.
                   </p>
-                  <h2>Area of Expertise</h2>
+                  <h4>Area of Expertise</h4>
                   <ul>
                     <li>Studied Python</li>
                     <li>AI Applications</li>
                   </ul>
-                  <h2>Notable Achievements</h2>
+                  <h4>Notable Achievements</h4>
                   <ul>
                     <li>Transitioned from medical to tech industry</li>
                   </ul>
@@ -154,12 +154,12 @@
                     and IT security. With experience in IT support and social
                     media marketing, he enjoys problem-solving.
                   </p>
-                  <h2>Area of Expertise</h2>
+                  <h4>Area of Expertise</h4>
                   <ul>
                     <li>Computing</li>
                     <li>IT Security</li>
                   </ul>
-                  <h2>Notable Achievements</h2>
+                  <h4>Notable Achievements</h4>
                   <ul>
                     <li>Experience in IT support and social media marketing</li>
                   </ul>
@@ -179,12 +179,12 @@
                     to change industries. Now, he is focusing on AI, using his
                     tech skills to grow and make an impact.
                   </p>
-                  <h2>Area of Expertise</h2>
+                  <h4>Area of Expertise</h4>
                   <ul>
                     <li>Software Development</li>
                     <li>Artificial Intelligence</li>
                   </ul>
-                  <h2>Notable Achievements</h2>
+                  <h4>Notable Achievements</h4>
                   <ul>
                     <li>Developed impactful AI projects</li>
                   </ul>
@@ -259,12 +259,42 @@
     <!-- Initialise Swiper -->
     <script>
       var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 3,
+         // Default parameters
+         slidesPerView: 1,
         spaceBetween: 30,
-        // pagination: {
-        //   el: ".swiper-pagination",
-        //   type: "fraction",
-        // },
+        // Responsive breakpoints
+        breakpoints: {
+          // when window width is >= 320px
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
+          // when window width is >= 480px
+          480: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          // when window width is >= 640px
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+          },
+          // when window width is >= 768px
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 40,
+          },
+          // when window width is >= 1024px
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 50,
+          },
+          // when window width is >= 1280px
+          1280: {
+            slidesPerView: 3,
+            spaceBetween: 60,
+          },
+        },
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",

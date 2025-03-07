@@ -93,6 +93,7 @@ window.addEventListener("load", () => {
   backToTopButton.style.bottom = "20px";
   backToTopButton.style.left = "20px";
   backToTopButton.style.display = "none";
+  backToTopButton.style.zIndex = 9999;
   document.body.appendChild(backToTopButton);
 
   // Show button when scrolled down 100px
